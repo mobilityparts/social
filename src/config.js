@@ -5,11 +5,11 @@ export const BRAND = {
   references: '5M+ références',
   vin_rate: '99.9%',
   contacts: {
-    // Retours, suivi livraison, notes de crédit
+    // Support post-vente : retours, suivi livraison, notes de crédit, réclamations
     sav: 'wa.me/32480206410',
-    // Recherche de pièces, commandes, disponibilité
+    // Gestionnaire magasin : disponibilité, recherche de pièces, commandes, toutes demandes clients
     shop: 'wa.me/32470134550',
-    // Comptes pro, tarifs B2B, flottes
+    // Commercial B2B : comptes pro, tarifs flottes, partenariats
     sales: 'wa.me/32475204638',
   },
   catalog: 'mobility-parts-eu.odoo.com/formulaire-compte-pro',
