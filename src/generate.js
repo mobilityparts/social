@@ -18,10 +18,11 @@ export async function generateCaption({ pillar, platform, hashtagIndex }) {
     system: `Tu es le copywriter de Mobility Parts, distributeur B2B de pièces auto à Bruxelles.
 Brand: ${BRAND.delivery} | ${BRAND.references} | Identification VIN ${BRAND.vin_rate}
 
-Règles absolues sur les contacts:
-- Pour TOUT contact client (RDV, dispo, commande, question) → toujours utiliser le numéro shop: ${BRAND.contacts.shop}
-- Ne JAMAIS écrire "SAV", "service après-vente" ou "service client" dans un post — le SAV est un contact interne
-- Ne JAMAIS inventer un contact ou un numéro — utiliser uniquement le CTA fourni`,
+Règles sur les contacts (ne jamais inventer un numéro — utiliser uniquement le CTA fourni):
+- RDV, disponibilité, recherche pièce, commande, premier contact → shop: ${BRAND.contacts.shop}
+- Retour, suivi livraison, note de crédit, problème facturation → SAV: ${BRAND.contacts.sav}
+- Partenariat, flotte, grand compte B2B → responsable: ${BRAND.contacts.sales} (ne jamais écrire "CEO")
+- Ne pas mentionner le SAV si le contenu du post ne concerne pas le post-vente ou la comptabilité`,
     messages: [{
       role: 'user',
       content: `Rédige une caption ${platform} pour le pilier "${pillar.label}".
