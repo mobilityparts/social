@@ -1,0 +1,86 @@
+import 'dotenv/config';
+import chalk from 'chalk';
+import { getNextPillar, getPillarById } from './config.js';
+import { generateCaption } from './generate.js';
+import { generateImage } from './visual.js';
+import { publishToInstagram, publishToFacebook } from './meta.js';
+import { getRealPostCount, getHashtagIndex, logPost } from './logger.js';
+
+const args = process.argv.slice(2);
+const dryRun = args.includes('--dry-run');
+const pilierArg = args.includes('--pilier') ? args[args.indexOf('--pilier') + 1] : null;
+const platforms = args.includes('--platform')
+  ? args[args.indexOf('--platform') + 1].split(',').map(p => p.trim())
+  : ['instagram', 'facebook'];
+
+async function run() {
+  const postCount = getRealPostCount();
+  const hashtagIndex = getHashtagIndex();
+  const pillar = pilierArg ? getPillarById(pilierArg) : getNextPillar(postCount);
+
+  console.log(chalk.bold(`\n🔧 Mobility Parts Social Publisher`));
+  console.log(`   Pilier     : ${chalk.cyan(pillar.label)}`);
+  console.log(`   Plateformes: ${chalk.cyan(platforms.join(', '))}`);
+  console.log(`   Post #${postCount + 1}${dryRun ? chalk.yellow('  [DRY-RUN]') : ''}\n`);
+
+  // 1. Génération caption (même texte de base, adapté par plateforme dans generate.js)
+  console.log(chalk.dim('→ Génération caption...'));
+  const igContent = platforms.includes('instagram')
+    ? await generateCaption({ pillar, platform: 'instagram', hashtagIndex })
+    : null;
+  const fbContent = platforms.includes('facebook')
+    ? await generateCaption({ pillar, platform: 'facebook', hashtagIndex })
+    : null;
+
+  const captionText = (igContent || fbContent).text;
+
+  // 2. Génération image
+  console.log(chalk.dim('→ Génération image...'));
+  const { imageUrl, prompt, provider } = await generateImage({ pillar, captionText, postCount });
+  console.log(`  Image (${provider}): ${imageUrl.slice(0, 60)}...`);
+
+  // 3. Aperçu
+  if (igContent) {
+    console.log(chalk.bold('\n📱 Instagram:'));
+    console.log(igContent.caption);
+  }
+  if (fbContent) {
+    console.log(chalk.bold('\n📘 Facebook:'));
+    console.log(fbContent.caption);
+  }
+  console.log('');
+
+  if (dryRun) {
+    console.log(chalk.yellow('✓ Dry-run terminé — rien publié.'));
+    for (const platform of platforms) {
+      const content = platform === 'instagram' ? igContent : fbContent;
+      if (content) {
+        logPost({ id: 'dry-run', platform, dryRun: true, pillar: pillar.id, text: content.text.slice(0, 80), imageUrl, provider });
+      }
+    }
+    return;
+  }
+
+  // 4. Publication
+  for (const platform of platforms) {
+    try {
+      const content = platform === 'instagram' ? igContent : fbContent;
+      if (!content) continue;
+
+      let result;
+      if (platform === 'instagram') {
+        result = await publishToInstagram({ caption: content.caption, imageUrl });
+      } else {
+        result = await publishToFacebook({ caption: content.caption, imageUrl });
+      }
+
+      console.log(chalk.green(`✓ ${platform} — id: ${result.id}`));
+      logPost({ id: result.id, platform, dryRun: false, pillar: pillar.id, text: content.text.slice(0, 80), imageUrl, provider, fluxPrompt: prompt });
+    } catch (err) {
+      console.error(chalk.red(`✗ ${platform} — ${err.message}`));
+      process.exit(1);
+    }
+  }
+}
+
+run();

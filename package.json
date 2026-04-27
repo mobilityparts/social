@@ -1,0 +1,18 @@
+{
+  "name": "mobility-parts-social",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node src/run.js",
+    "dry": "node src/run.js --dry-run",
+    "schedule": "node src/scheduler.js",
+    "status": "node src/status.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "chalk": "^5.3.0",
+    "dotenv": "^16.4.5",
+    "node-cron": "^3.0.3",
+    "node-fetch": "^3.3.2"
+  }
+}
