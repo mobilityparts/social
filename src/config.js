@@ -5,8 +5,11 @@ export const BRAND = {
   references: '5M+ références',
   vin_rate: '99.9%',
   contacts: {
+    // Retours, suivi livraison, notes de crédit
     sav: 'wa.me/32480206410',
+    // Recherche de pièces, commandes, disponibilité
     shop: 'wa.me/32470134550',
+    // Comptes pro, tarifs B2B, flottes
     sales: 'wa.me/32475204638',
   },
   catalog: 'mobility-parts-eu.odoo.com/formulaire-compte-pro',
@@ -18,7 +21,7 @@ export const PILLARS = [
     label: 'Conseil Méca',
     weight: 3,
     tone: 'expert, pédagogue, accessible — comme un mecanicien qui explique à un confrère',
-    cta: `Des questions ? Notre SAV répond vite.\n📲 ${BRAND.contacts.sav}`,
+    cta: `Besoin d'une pièce ? On la trouve pour vous.\n📲 ${BRAND.contacts.shop}`,
     imageStyle: 'mechanic working on a car engine, professional workshop, detailed close-up of hands and tools',
   },
   {
@@ -68,7 +71,7 @@ export function getPillarById(id) {
 const IG_HASHTAG_SETS = [
   '#piecesauto #garage #mecanique #bruxelles #mobilityparts #carparts #autoparts #technicien',
   '#piecesdetachees #carrepair #mecanicien #workshop #belgique #mobilityparts #voiture #garage',
-  '#automotiveparts #carpartsbelgium #mecaauto #bxl #mobilityparts #pieceauto #bosch #valeo',
+  '#automotiveparts #carpartsbelgium #mecaauto #bxl #mobilityparts #pieceauto #livraisonauto #b2bauto',
 ];
 
 const FB_HASHTAG_SETS = [
