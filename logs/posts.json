@@ -18,5 +18,25 @@
     "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1080&q=80",
     "provider": "fallback",
     "timestamp": "2026-04-27T23:36:35.954Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "tips",
+    "text": "Votre client demande pourquoi son moteur consomme trop ? Vous cherchez la répons",
+    "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1080&q=80",
+    "provider": "fallback",
+    "timestamp": "2026-04-27T23:42:44.544Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "facebook",
+    "dryRun": true,
+    "pillar": "tips",
+    "text": "Vous avez déjà été confronté à un diagnostic flou ? On le sait, trouver la bonne",
+    "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1080&q=80",
+    "provider": "fallback",
+    "timestamp": "2026-04-27T23:42:44.545Z"
   }
 ]
