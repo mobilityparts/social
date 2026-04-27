@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "tips",
+    "text": "Votre turbo fait du bruit ? C'est pas forcément la fin du monde 🔧\n\nOn vous expl",
+    "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1080&q=80",
+    "provider": "fallback",
+    "timestamp": "2026-04-27T23:36:35.954Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "facebook",
+    "dryRun": true,
+    "pillar": "tips",
+    "text": "Vous avez déjà changé un turbo sans bien comprendre comment il fonctionne ? On v",
+    "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1080&q=80",
+    "provider": "fallback",
+    "timestamp": "2026-04-27T23:36:35.954Z"
+  }
+]
