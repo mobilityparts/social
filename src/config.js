@@ -7,9 +7,9 @@ export const BRAND = {
   contacts: {
     // Support post-vente : retours, suivi livraison, notes de crédit, réclamations
     sav: 'wa.me/32480206410',
-    // Gestionnaire magasin : disponibilité, recherche de pièces, commandes, toutes demandes clients
+    // Premier contact client : RDV, disponibilité, recherche pièces, commandes, toutes demandes
     shop: 'wa.me/32470134550',
-    // Commercial B2B : comptes pro, tarifs flottes, partenariats
+    // Responsable partenariats & grands comptes B2B (flottes, revendeurs) — ne pas mentionner CEO
     sales: 'wa.me/32475204638',
   },
   catalog: 'mobility-parts-eu.odoo.com/formulaire-compte-pro',
@@ -21,7 +21,7 @@ export const PILLARS = [
     label: 'Conseil Méca',
     weight: 3,
     tone: 'expert, pédagogue, accessible — comme un mecanicien qui explique à un confrère',
-    cta: `Besoin d'une pièce ? On la trouve pour vous.\n📲 ${BRAND.contacts.shop}`,
+    cta: `Une question ou un RDV ? On vous répond.\n📲 ${BRAND.contacts.shop}`,
     imageStyle: 'mechanic working on a car engine, professional workshop, detailed close-up of hands and tools',
   },
   {
@@ -37,7 +37,7 @@ export const PILLARS = [
     label: 'Pro B2B',
     weight: 2,
     tone: 'direct, orienté ROI, professionnel — parle aux gérants de garage et responsables flotte',
-    cta: `Ouvrez votre compte pro gratuit\n🔗 ${BRAND.catalog}\n📲 Commercial: ${BRAND.contacts.sales}`,
+    cta: `Un projet de partenariat ou une flotte à gérer ? Parlons-en.\n📲 ${BRAND.contacts.sales}`,
     imageStyle: 'professional auto parts warehouse, organized shelves, business setting, Bruxelles',
   },
   {
