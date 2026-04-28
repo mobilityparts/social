@@ -8,20 +8,23 @@ async function buildImagePrompt(captionText, pillar) {
     max_tokens: 200,
     messages: [{
       role: 'user',
-      content: `Write a photorealistic image generation prompt for an Instagram post from Mobility Parts, a professional auto parts distributor in Brussels.
+      content: `Write a FLUX image generation prompt for an Instagram post from Mobility Parts, a B2B auto parts distributor in Brussels.
 
 Post content: ${captionText.slice(0, 200)}
 Pillar: ${pillar.label}
 
-Requirements:
-- Canon EOS R5 DSLR photography style, 50mm lens, shallow depth of field
-- Real professional European garage or workshop environment
-- Auto parts or mechanic work shown naturally, not posed
-- Soft natural daylight or professional workshop lighting, no harsh shadows
-- Neutral realistic colors, accurate skin tones if people present
-- Square 1:1 composition
-- Hyper-realistic, photographic, NOT illustrated, NOT CGI, NOT painting
-- No text, no logos, no watermarks
+STRICT VISUAL RULES:
+- NO human faces, NO people — focus entirely on parts, products, environment
+- Documentary photojournalism style: raw, real, unglamourized
+- Show the OPERATIONAL REALITY: auto parts on shelves, parts being delivered in boxes, spare parts laid out on a workbench, engine components close-up, parts catalog or scanner, delivery boxes at a garage door, mechanic tools and hardware
+- Canon EOS R5, 35mm or 50mm lens, f/2.8, natural or workshop fluorescent lighting
+- Shallow depth of field, sharp focus on the subject
+- Neutral, slightly desaturated colors — real workshop environment, no artificial warmth
+- Square 1:1 composition, Instagram-ready
+- Hyper-realistic photography — NOT illustrated, NOT CGI, NOT painted, NOT AI-looking
+- No text, no logos, no watermarks, no brand identifiers
+
+Focus on what Mobility Parts actually does: sourcing, delivering, stocking the right automotive parts.
 
 Reply with ONLY the prompt, nothing else.`,
     }],
