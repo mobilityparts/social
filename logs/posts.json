@@ -140,5 +140,25 @@
     "provider": "replicate",
     "fluxPrompt": "A professional mechanic in a modern Brussels workshop, wearing dark work clothes and protective gloves, performing detailed brake pad inspection and replacement on a car engine. Close-up shot focusing on skilled hands manipulating brake components with precision tools and calipers. Natural neutral white workshop lighting, sharp focus on the mechanical work, realistic skin tones and metal textures, clean neutral gray concrete background, professional commercial photography style, square 1:1 composition, high resolution, no text or logos, naturally lit realistic automotive workshop scene.",
     "timestamp": "2026-04-28T00:27:16.370Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "tips",
+    "text": "**Votre courroie crisse ? C'est peut-être pas la courroie.** 🔧\n\nAvant de change",
+    "imageUrl": "https://replicate.delivery/xezq/ja1IrqVbWzJWBJDKjpx2e8hhseGxmgeYFzCsuHQviweN1s9ZB/out-0.jpg",
+    "provider": "replicate",
+    "timestamp": "2026-04-28T00:37:39.987Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "facebook",
+    "dryRun": true,
+    "pillar": "tips",
+    "text": "Souvent, on pense qu'une panne mécanique, c'est fatalement cher et compliqué. Po",
+    "imageUrl": "https://replicate.delivery/xezq/ja1IrqVbWzJWBJDKjpx2e8hhseGxmgeYFzCsuHQviweN1s9ZB/out-0.jpg",
+    "provider": "replicate",
+    "timestamp": "2026-04-28T00:37:39.987Z"
   }
 ]
