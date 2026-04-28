@@ -352,5 +352,15 @@
     "imageUrl": "https://replicate.delivery/xezq/N5wtKApMMGahBZRUxCTaaN5rsHPqzbAbMuicDxsO0p1xq6nF/tmp9v6h7uui.jpg",
     "provider": "flux-pro",
     "timestamp": "2026-04-28T18:13:27.780Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "b2b",
+    "text": "5M+ références au catalogue. Zéro appel à 4 fournisseurs différents.\n\nUn seul nu",
+    "imageUrl": "https://replicate.delivery/xezq/ip01r8uBVmoKIZc5gF2gZF9FPMe0eIjhsq1fCk477obegrezC/tmpg1y5nrua.jpg",
+    "provider": "flux-pro",
+    "timestamp": "2026-04-28T18:27:27.344Z"
   }
 ]
