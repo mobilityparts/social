@@ -6,25 +6,26 @@ const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 async function buildFluxPrompt(pillar, captionText) {
   const message = await client.messages.create({
     model: 'claude-haiku-4-5-20251001',
-    max_tokens: 150,
+    max_tokens: 200,
     messages: [{
       role: 'user',
-      content: `Write a FLUX image generation prompt for a Mobility Parts (auto parts distributor, Brussels) social media post.
+      content: `Write a FLUX image generation prompt for a Mobility Parts (auto parts distributor, Brussels) Instagram post.
 
 Pillar: ${pillar.label}
-Visual style hint: ${pillar.imageStyle}
-Caption context: ${captionText.slice(0, 120)}
+Visual context: ${pillar.imageStyle}
+Caption: ${captionText.slice(0, 120)}
 
-Requirements:
-- Professional commercial photography style
-- Square 1:1 format, Instagram-ready
-- Natural realistic colors, accurate skin tones — absolutely no yellow, green or unnatural color casts on skin or objects
-- Clean neutral background or workshop environment
-- No text, no logos, no watermarks
-- High quality, sharp, well-lit with neutral white light
-- Photo-realistic, not illustrated or cartoon
+Visual style to follow — inspired by Autodoc's Instagram:
+- Ultra photo-realistic, DSLR camera quality, sharp focus
+- Real mechanic or technician working on an actual car (not a stock photo pose)
+- Auto part shown IN CONTEXT: either being installed, held next to the vehicle, or displayed on a clean workshop bench
+- Professional European garage / workshop environment — clean floor, good lighting, organised tools visible in background
+- Neutral white or soft daylight lighting — no color casts, no yellow tints, accurate realistic skin tones
+- Tight composition: focus on the hands, the part, and the relevant section of the car
+- Square 1:1 crop, Instagram-ready
+- No text, no logos, no watermarks, no illustrations, no CGI
 
-Reply with ONLY the prompt (no explanation).`,
+Reply with ONLY the prompt, no explanation.`,
     }],
   });
   return message.content[0].text.trim();

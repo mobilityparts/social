@@ -22,7 +22,7 @@ export const PILLARS = [
     weight: 3,
     tone: 'expert, pédagogue, accessible — comme un mecanicien qui explique à un confrère',
     cta: `Une question ou un RDV ? 👉 Lien en bio`,
-    imageStyle: 'mechanic working on a car engine, professional workshop, detailed close-up of hands and tools',
+    imageStyle: 'close-up of a mechanic\'s hands installing or inspecting a specific car part on a real vehicle, professional European workshop, tools on bench in background',
   },
   {
     id: 'produit',
@@ -30,7 +30,7 @@ export const PILLARS = [
     weight: 2,
     tone: 'technique, précis, confiant — met en valeur la qualité et la fiabilité',
     cta: `5M+ références disponibles\n🔗 ${BRAND.catalog}`,
-    imageStyle: 'automotive spare part on clean white background, studio lighting, professional product photography',
+    imageStyle: 'new auto part placed on a clean workshop bench next to the corresponding worn/old part, sharp detail, neutral grey background, soft studio lighting',
   },
   {
     id: 'b2b',
@@ -38,7 +38,7 @@ export const PILLARS = [
     weight: 2,
     tone: 'direct, orienté ROI, professionnel — parle aux gérants de garage et responsables flotte',
     cta: `Un projet de partenariat ou une flotte à gérer ? Parlons-en.\n📲 ${BRAND.contacts.sales}`,
-    imageStyle: 'professional auto parts warehouse, organized shelves, business setting, Bruxelles',
+    imageStyle: 'organised auto parts warehouse with well-lit shelving, a professional advisor handing a boxed part to a garage technician, business handshake context',
   },
   {
     id: 'promo',
@@ -46,7 +46,7 @@ export const PILLARS = [
     weight: 2,
     tone: 'urgent, attractif, direct — crée le sentiment d\'opportunité',
     cta: `Commandez avant 18h → livraison J+1\n👉 Lien en bio`,
-    imageStyle: 'automotive parts with orange accent lighting, promotional photography, dynamic composition',
+    imageStyle: 'multiple auto parts arranged on a clean workshop bench, price tag visible, bright neutral lighting, sharp product photography, orange accent in background',
   },
   {
     id: 'atelier',
@@ -54,7 +54,7 @@ export const PILLARS = [
     weight: 1,
     tone: 'humour, proximité, authentique — ambiance garage, entre pros',
     cta: `👉 Lien en bio`,
-    imageStyle: 'busy car repair workshop atmosphere, mechanics at work, authentic garage environment',
+    imageStyle: 'candid shot of mechanics working in a busy authentic European garage, cars on lifts, team atmosphere, natural workshop lighting, genuine moment',
   },
 ];
 
