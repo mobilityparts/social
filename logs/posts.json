@@ -191,5 +191,16 @@
     "imageUrl": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-JhsxMYrJUPaVEyxLHzbiDrog/user-VeggT8ZlvlEjZnkQqGDHabrB/img-pHM0rdaUjFBE6U1kD4vdG1tG.png?st=2026-04-28T16%3A23%3A09Z&se=2026-04-28T18%3A23%3A09Z&sp=r&sv=2026-02-06&sr=b&rscd=inline&rsct=image/png&skoid=8b33a531-2df9-46a3-bc02-d4b1430a422c&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-04-28T16%3A59%3A59Z&ske=2026-04-29T16%3A59%3A59Z&sks=b&skv=2026-02-06&sig=%2BKmx79jjFTWK9xHVu8s0zhNR7KCwl68Gdwhus116PmI%3D",
     "provider": "dalle3",
     "timestamp": "2026-04-28T17:23:09.388Z"
+  },
+  {
+    "id": "17910140883202409",
+    "platform": "instagram",
+    "dryRun": false,
+    "pillar": "produit",
+    "text": "Identification VIN 99.9%, 5M+ références, livraison J+1 ✅\n\nChez Mobility Parts, ",
+    "imageUrl": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-JhsxMYrJUPaVEyxLHzbiDrog/user-VeggT8ZlvlEjZnkQqGDHabrB/img-1EnjIg3UfWnh0YFlTelgFDsd.png?st=2026-04-28T16%3A25%3A04Z&se=2026-04-28T18%3A25%3A04Z&sp=r&sv=2026-02-06&sr=b&rscd=inline&rsct=image/png&skoid=9346e9b9-5d29-4d37-a0a9-c6f95f09f79d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-04-28T08%3A57%3A52Z&ske=2026-04-29T08%3A57%3A52Z&sks=b&skv=2026-02-06&sig=oaHd1DZWvfhd/tWBGhaPPVcAHCujBkHmuY1uEI2FVec%3D",
+    "provider": "dalle3",
+    "fluxPrompt": "A professional mechanic in a modern Brussels automotive workshop carefully scanning a VIN number on a car engine block with a diagnostic tablet, surrounded by neatly organized shelves of genuine auto parts in labeled containers, natural daylight streaming through large windows, captured with sharp DSLR detail, neutral white workshop lighting, clean and organized workspace, square composition, photorealistic, no text or branding visible.",
+    "timestamp": "2026-04-28T17:25:15.337Z"
   }
 ]
