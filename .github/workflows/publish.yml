@@ -40,7 +40,7 @@ jobs:
           META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
           FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
           INSTAGRAM_BUSINESS_ID: ${{ secrets.INSTAGRAM_BUSINESS_ID }}
-        run: node src/run.js --platform instagram,facebook ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
+        run: node src/run.js --platform instagram ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
 
       - name: Save publication log
         run: |
