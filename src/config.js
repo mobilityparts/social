@@ -50,7 +50,7 @@ export const PILLARS = [
     label: 'Produit / Marque',
     weight: 2,
     tone: 'technique, précis, confiant — met en valeur la qualité et la fiabilité',
-    cta: `5M+ références disponibles\n🔗 ${BRAND.catalog}`,
+    cta: `Compte pro & tarifs B2B → 👉 Lien en bio`,
     imageScenes: [
       'new brake disc next to a heavily worn rusted one on a clean grey workbench, studio lighting',
       'set of 4 new spark plugs perfectly aligned on white background, macro close-up',

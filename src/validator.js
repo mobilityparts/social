@@ -58,10 +58,10 @@ const RULES = [
     },
   },
   {
-    id: 'no-brand-names',
-    desc: 'Nom de marque spécifique détecté (politique: pas de marques dans les posts)',
+    id: 'no-supplier-names',
+    desc: 'Nom du réseau distributeur cité (Auto Partner / IDIR ne doivent pas apparaître)',
     check: ({ caption }) =>
-      /\b(bosch|valeo|trw|zimmermann|ngk|gates|skf|sachs|brembo|ferodo|ate\b|febi|lemf[oö]rder)/i.test(caption),
+      /\bauto\s*partner\b|\bidir\b/i.test(caption),
   },
 ];
 
