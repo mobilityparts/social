@@ -312,5 +312,15 @@
     "imageUrl": "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=1080&q=80",
     "provider": "fallback",
     "timestamp": "2026-04-28T18:05:56.419Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "tips",
+    "text": "87% des devis qu'on chiffre au téléphone, c'est sur des réparations où le client",
+    "imageUrl": "https://replicate.delivery/xezq/iIX1X3Rq3g4fFaxfdR6ILxpGjHdB0gx51aevpikXFfTOZqezC/tmp9kzkmomn.jpg",
+    "provider": "flux-pro",
+    "timestamp": "2026-04-28T18:08:19.657Z"
   }
 ]
