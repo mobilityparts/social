@@ -222,5 +222,15 @@
     "imageUrl": "https://replicate.delivery/xezq/akYzWpHfOfhlGE7DbgcRABZIfkAe9Z4L9PLE7ZmQ5erEfg6nF/tmpwnzv3axu.jpg",
     "provider": "flux-pro",
     "timestamp": "2026-04-28T17:31:36.961Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "b2b",
+    "text": "Un garage sur trois commande la mauvaise pièce avant de trouver la bonne.\n\nC'est",
+    "imageUrl": "https://replicate.delivery/xezq/Wp0EJZkrYrbiK194N448MI7PioE6VVs4agOuNf8QUrsmC1PLA/tmps7z1r83r.jpg",
+    "provider": "flux-pro",
+    "timestamp": "2026-04-28T17:33:02.159Z"
   }
 ]
