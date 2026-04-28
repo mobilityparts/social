@@ -38,5 +38,25 @@
     "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1080&q=80",
     "provider": "fallback",
     "timestamp": "2026-04-27T23:42:44.545Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "tips",
+    "text": "**Votre turbo souffle mais l'actuateur de géométrie variable est HS ?** 🔧\n\nOn v",
+    "imageUrl": "https://images.unsplash.com/photo-1600705722908-bae9c1cb4144?w=1080&q=80",
+    "provider": "fallback",
+    "timestamp": "2026-04-28T00:16:32.873Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "facebook",
+    "dryRun": true,
+    "pillar": "tips",
+    "text": "Chez Mobility Parts, on sait que trouver la bonne pièce c'est bien, mais compren",
+    "imageUrl": "https://images.unsplash.com/photo-1600705722908-bae9c1cb4144?w=1080&q=80",
+    "provider": "fallback",
+    "timestamp": "2026-04-28T00:16:32.874Z"
   }
 ]
