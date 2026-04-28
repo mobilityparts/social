@@ -292,5 +292,15 @@
     "imageUrl": "https://replicate.delivery/xezq/pbiloVzLeMTafENYhefYn1oZf9ySvAS8GExbQozqJIsk5T9zC/tmp7g41wyz_.jpg",
     "provider": "flux-pro",
     "timestamp": "2026-04-28T18:00:47.722Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "b2b",
+    "text": "Vous appelez 4 distributeurs avant de trouver la bonne pièce ?\n\nC'est le quotidi",
+    "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1080&q=80",
+    "provider": "fallback",
+    "timestamp": "2026-04-28T18:03:48.482Z"
   }
 ]
