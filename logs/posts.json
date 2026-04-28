@@ -362,5 +362,15 @@
     "imageUrl": "https://replicate.delivery/xezq/ip01r8uBVmoKIZc5gF2gZF9FPMe0eIjhsq1fCk477obegrezC/tmpg1y5nrua.jpg",
     "provider": "flux-pro",
     "timestamp": "2026-04-28T18:27:27.344Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "b2b",
+    "text": "Disques de frein usés : comment les clients les voient trop tard et comment vous",
+    "imageUrl": "https://replicate.delivery/xezq/QgBZfSkENB2YNqH5xChiMx1QyqH2ukPaU17o5JJUQZffdbfZB/tmpll5xi1v9.jpg",
+    "provider": "flux-pro",
+    "timestamp": "2026-04-28T21:42:23.769Z"
   }
 ]
