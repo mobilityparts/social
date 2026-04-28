@@ -262,5 +262,15 @@
     "imageUrl": "https://replicate.delivery/xezq/lrWeAs9dBs3GRaeZMLBp4I7tFBeHSQahinC27rdLtYJRgUfZB/tmp692hzj90.jpg",
     "provider": "flux-pro",
     "timestamp": "2026-04-28T17:44:40.386Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "b2b",
+    "text": "Vous commandez une couronne à 14h, le client attend à 15h30, et le fournisseur v",
+    "imageUrl": "https://replicate.delivery/xezq/fX9d3gFHOV2jJCNNQ9mD5nkKClfyzimBerc3fLtfTdpxRS9zC/tmpt5w24h90.jpg",
+    "provider": "flux-pro",
+    "timestamp": "2026-04-28T17:46:54.660Z"
   }
 ]
