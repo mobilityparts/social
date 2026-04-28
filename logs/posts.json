@@ -252,5 +252,15 @@
     "imageUrl": "https://replicate.delivery/xezq/9KwgLoeNEY1NUSdWak4FfNOnT8DM6Xjgb75a4oQoD1tmMqfsA/tmp5_db_s4l.jpg",
     "provider": "flux-pro",
     "timestamp": "2026-04-28T17:40:54.719Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "b2b",
+    "text": "Une commande avant 18h, elle est au garage à 8h. Pas de mauvaise référence, pas ",
+    "imageUrl": "https://replicate.delivery/xezq/lrWeAs9dBs3GRaeZMLBp4I7tFBeHSQahinC27rdLtYJRgUfZB/tmp692hzj90.jpg",
+    "provider": "flux-pro",
+    "timestamp": "2026-04-28T17:44:40.386Z"
   }
 ]
