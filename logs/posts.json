@@ -98,5 +98,16 @@
     "imageUrl": "https://replicate.delivery/xezq/NjHftbDJAsQf3UeRavJ96XBNWPtRhXz2weaDVT1ExqPd5r9ZB/out-0.jpg",
     "provider": "replicate",
     "timestamp": "2026-04-28T00:21:43.318Z"
+  },
+  {
+    "id": "18116368501668242",
+    "platform": "instagram",
+    "dryRun": false,
+    "pillar": "tips",
+    "text": "Votre client se plaint d'une vibration à l'accélération ? 🔧 On vous explique le",
+    "imageUrl": "https://replicate.delivery/xezq/VIRyvwRNUW4wGJ7rgT2XFayZQqNx5GX8sCfzKpAKGNA9fafsA/out-0.jpg",
+    "provider": "replicate",
+    "fluxPrompt": "A professional mechanic with weathered hands working on a car engine in a modern Brussels workshop, close-up detail shot of hands adjusting engine components with precision tools, natural workshop lighting casting shadows across the metal parts, orange work gloves or orange-handled tools catching the light, sharp focus on the mechanical work, professional commercial photography style, 1:1 square composition, pristine workshop environment with blurred background, high resolution, cinematic lighting, no text or logos",
+    "timestamp": "2026-04-28T00:23:31.131Z"
   }
 ]
