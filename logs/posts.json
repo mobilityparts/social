@@ -181,5 +181,15 @@
     "imageUrl": "https://images.pexels.com/photos/29043802/pexels-photo-29043802.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "provider": "pexels",
     "timestamp": "2026-04-28T17:05:45.225Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "produit",
+    "text": "Identification VIN 99.9% précise. Sourcing fiable. Livraison J+1. 🎯\n\nChez Mobil",
+    "imageUrl": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-JhsxMYrJUPaVEyxLHzbiDrog/user-VeggT8ZlvlEjZnkQqGDHabrB/img-pHM0rdaUjFBE6U1kD4vdG1tG.png?st=2026-04-28T16%3A23%3A09Z&se=2026-04-28T18%3A23%3A09Z&sp=r&sv=2026-02-06&sr=b&rscd=inline&rsct=image/png&skoid=8b33a531-2df9-46a3-bc02-d4b1430a422c&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-04-28T16%3A59%3A59Z&ske=2026-04-29T16%3A59%3A59Z&sks=b&skv=2026-02-06&sig=%2BKmx79jjFTWK9xHVu8s0zhNR7KCwl68Gdwhus116PmI%3D",
+    "provider": "dalle3",
+    "timestamp": "2026-04-28T17:23:09.388Z"
   }
 ]
