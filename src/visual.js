@@ -16,7 +16,23 @@ Pillar: ${pillar.label}
 STRICT VISUAL RULES:
 - NO full human faces ever — frame from shoulders down, or hands only
 - RAW AUTHENTICITY: show the unglamourized reality of daily mechanic work
-- Preferred subjects (pick what fits the post): grease-stained mechanic hands gripping a wrench or socket, worn work gloves handling a brake disc or alternator, a torque wrench resting on an engine block, auto parts arranged on a grimy workbench, cardboard delivery boxes stacked at a garage door, a VIN scanner held over an engine bay, rows of parts on industrial metal shelving, oil-stained shop floor with tools, a mechanic's forearm reaching into an engine bay
+- AVOID: straight tools (wrenches, rulers, screwdrivers) — they distort in AI. Instead use:
+- BEST SUBJECTS for realism (choose what fits the post content):
+  * A thick golden stream of motor oil being poured from a black container into an open engine, splash detail visible
+  * Gloved hands lifting a brand-new brake disc from a cardboard box, workshop floor visible below
+  * Close-up of an engine oil filler cap removed, oil residue around the opening, engine bay in background
+  * A used vs new oil filter side by side on a greasy metal workbench, dramatic lighting
+  * Stack of spare parts boxes — brake pads, filters, belts — neatly arranged at a garage entrance
+  * A mechanic's forearm in a blue work uniform reaching deep into an engine bay, engine components surrounding
+  * Coolant being poured into a translucent reservoir, vapor visible, green liquid
+  * A dirty, oil-coated engine block close-up — valve cover gasket being replaced, hands just out of frame
+  * Brake caliper removed and sitting on concrete floor next to a new replacement, workshop background
+  * Battery terminals being connected — copper clamps, white oxide residue on old terminals, close-up
+  * Timing belt laid flat on a workbench next to a worn one — texture contrast
+  * Cardboard delivery boxes from Mobility Parts stacked at the open roll-up door of a garage, morning light
+  * An engine air filter housing open, dirty filter being pulled out by gloved hands
+  * Motor oil draining from a plug into a black pan, golden stream, workshop floor
+  * Spark plugs lined up on a cloth — old carbon-coated next to new, close-up macro detail
 - Canon EOS R5, 35mm lens, f/2.0, shallow depth of field — sharp on subject, bokeh background
 - Harsh realistic workshop lighting: fluorescent overhead mixed with a bit of natural light through a roll-up door
 - Colors: slightly desaturated, high contrast, gritty — grease blacks, steel greys, concrete floors, worn orange or green work uniforms visible at the edges
