@@ -1,135 +1,77 @@
-import Anthropic from '@anthropic-ai/sdk';
 import { FALLBACK_IMAGES } from './config.js';
 
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+const PEXELS_QUERIES = {
+  tips: [
+    'mechanic repairing car engine',
+    'auto mechanic hands brake repair',
+    'car workshop garage repair',
+    'mechanic replacing car parts',
+    'professional car maintenance',
+  ],
+  produit: [
+    'car spare parts close up',
+    'automotive engine components',
+    'auto parts store',
+    'car brake disc rotor',
+    'automotive filters oil',
+  ],
+  b2b: [
+    'automotive parts warehouse',
+    'professional mechanic workshop',
+    'car parts delivery logistics',
+    'fleet vehicle maintenance',
+    'auto parts wholesale',
+  ],
+  promo: [
+    'mechanic tools garage',
+    'car repair workshop',
+    'automotive service center',
+    'garage professional tools',
+    'car parts workshop bench',
+  ],
+  atelier: [
+    'car repair shop interior',
+    'mechanic working on car',
+    'professional garage workshop',
+    'auto repair team',
+    'mechanic lifting car',
+  ],
+};
 
-async function buildFluxPrompt(pillar, captionText) {
-  const message = await client.messages.create({
-    model: 'claude-haiku-4-5-20251001',
-    max_tokens: 200,
-    messages: [{
-      role: 'user',
-      content: `Write a FLUX image generation prompt for a Mobility Parts (auto parts distributor, Brussels) Instagram post.
+async function searchPexels(pillarId) {
+  const queries = PEXELS_QUERIES[pillarId] || PEXELS_QUERIES.tips;
+  const query = queries[Math.floor(Math.random() * queries.length)];
+  const page = Math.floor(Math.random() * 3) + 1;
 
-Pillar: ${pillar.label}
-Visual scene: ${pillar.imageScenes[Math.floor(Math.random() * pillar.imageScenes.length)]}
-Caption: ${captionText.slice(0, 120)}
+  const url = `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=15&page=${page}&orientation=square`;
 
-Visual style to follow — inspired by Autodoc's Instagram:
-- Ultra photo-realistic, DSLR camera quality, sharp focus
-- Real mechanic or technician working on an actual car (not a stock photo pose)
-- Auto part shown IN CONTEXT: either being installed, held next to the vehicle, or displayed on a clean workshop bench
-- Professional European garage / workshop environment — clean floor, good lighting, organised tools visible in background
-- Neutral white or soft daylight lighting — no color casts, no yellow tints, accurate realistic skin tones
-- Tight composition: focus on the hands, the part, and the relevant section of the car
-- Square 1:1 crop, Instagram-ready
-- No text, no logos, no watermarks, no illustrations, no CGI
-
-Reply with ONLY the prompt, no explanation.`,
-    }],
-  });
-  return message.content[0].text.trim();
-}
-
-async function generateWithReplicate(prompt) {
-  const res = await fetch('https://api.replicate.com/v1/models/black-forest-labs/flux-schnell/predictions', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${process.env.REPLICATE_API_TOKEN}`,
-      'Content-Type': 'application/json',
-      Prefer: 'wait=60',
-    },
-    body: JSON.stringify({
-      input: {
-        prompt,
-        aspect_ratio: '1:1',
-        num_outputs: 1,
-        output_format: 'jpg',
-        output_quality: 85,
-        go_fast: true,
-      },
-    }),
-  });
-
-  if (!res.ok) throw new Error(`Replicate ${res.status}: ${await res.text()}`);
-
-  const prediction = await res.json();
-  if (prediction.status === 'succeeded') return prediction.output[0];
-  return await pollReplicate(prediction.urls.get);
-}
-
-async function pollReplicate(url, maxAttempts = 30) {
-  for (let i = 0; i < maxAttempts; i++) {
-    await new Promise(r => setTimeout(r, 2000));
-    const res = await fetch(url, {
-      headers: { Authorization: `Bearer ${process.env.REPLICATE_API_TOKEN}` },
-    });
-    const data = await res.json();
-    if (data.status === 'succeeded') return data.output[0];
-    if (data.status === 'failed') throw new Error(`Replicate prediction failed: ${data.error}`);
-  }
-  throw new Error('Replicate timed out');
-}
-
-async function generateWithStability(prompt) {
-  const form = new FormData();
-  form.append('prompt', prompt);
-  form.append('aspect_ratio', '1:1');
-  form.append('output_format', 'jpeg');
-
-  const res = await fetch('https://api.stability.ai/v2beta/stable-image/generate/core', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${process.env.STABILITY_API_KEY}`,
-      Accept: 'application/json',
-    },
-    body: form,
+  const res = await fetch(url, {
+    headers: { Authorization: process.env.PEXELS_API_KEY },
   });
 
-  if (!res.ok) throw new Error(`Stability ${res.status}: ${await res.text()}`);
+  if (!res.ok) throw new Error(`Pexels ${res.status}: ${await res.text()}`);
 
   const data = await res.json();
-  // Returns base64 image — upload to imgbb to get a public URL
-  return await uploadToImgbb(data.image);
+  if (!data.photos?.length) throw new Error('Pexels: nessuna foto trovata');
+
+  const photo = data.photos[Math.floor(Math.random() * data.photos.length)];
+  const imageUrl = photo.src.large2x || photo.src.large;
+
+  console.log(`  Pexels: "${query}" — ${photo.photographer} (${photo.url})`);
+  return imageUrl;
 }
 
-async function uploadToImgbb(base64) {
-  const key = process.env.IMGBB_API_KEY;
-  if (!key) throw new Error('IMGBB_API_KEY manquant pour héberger l\'image Stability AI');
-
-  const form = new FormData();
-  form.append('key', key);
-  form.append('image', base64);
-
-  const res = await fetch('https://api.imgbb.com/1/upload', { method: 'POST', body: form });
-  if (!res.ok) throw new Error(`imgbb ${res.status}: ${await res.text()}`);
-  const data = await res.json();
-  return data.data.url;
-}
-
-export async function generateImage({ pillar, captionText, postCount }) {
-  const prompt = await buildFluxPrompt(pillar, captionText);
-  console.log(`  FLUX prompt: ${prompt.slice(0, 90)}...`);
-
-  if (process.env.REPLICATE_API_TOKEN) {
+export async function generateImage({ pillar }) {
+  if (process.env.PEXELS_API_KEY) {
     try {
-      const imageUrl = await generateWithReplicate(prompt);
-      return { imageUrl, prompt, provider: 'replicate' };
+      const imageUrl = await searchPexels(pillar.id);
+      return { imageUrl, provider: 'pexels' };
     } catch (err) {
-      console.warn(`  ⚠ Replicate: ${err.message}`);
-    }
-  }
-
-  if (process.env.STABILITY_API_KEY) {
-    try {
-      const imageUrl = await generateWithStability(prompt);
-      return { imageUrl, prompt, provider: 'stability' };
-    } catch (err) {
-      console.warn(`  ⚠ Stability: ${err.message}`);
+      console.warn(`  ⚠ Pexels: ${err.message}`);
     }
   }
 
   const imageUrl = FALLBACK_IMAGES[Math.floor(Math.random() * FALLBACK_IMAGES.length)];
-  console.warn(`  ⚠ Fallback stock image utilisée`);
-  return { imageUrl, prompt, provider: 'fallback' };
+  console.warn('  ⚠ Fallback stock image utilisée');
+  return { imageUrl, provider: 'fallback' };
 }
