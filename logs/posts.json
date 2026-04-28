@@ -282,5 +282,15 @@
     "imageUrl": "https://replicate.delivery/xezq/m1fllAcRHbXUDyZAwfSHM5FzRGnKPvTvtEZ8mhC1WyaFbqfsA/tmp553q1cag.jpg",
     "provider": "flux-pro",
     "timestamp": "2026-04-28T17:56:21.885Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "b2b",
+    "text": "Vous commandez à 17h30, la pièce arrive à 8h le lendemain. Pas d'exception, pas ",
+    "imageUrl": "https://replicate.delivery/xezq/pbiloVzLeMTafENYhefYn1oZf9ySvAS8GExbQozqJIsk5T9zC/tmp7g41wyz_.jpg",
+    "provider": "flux-pro",
+    "timestamp": "2026-04-28T18:00:47.722Z"
   }
 ]
