@@ -171,5 +171,15 @@
     "provider": "replicate",
     "fluxPrompt": "A professional European mechanic in a modern, clean garage workshop carefully holds a bright LED headlight bulb in his right hand while leaning over an open car hood in soft daylight. His left hand is positioned near the headlight socket on the vehicle. The workshop environment is visible in the soft-focused background with organized tools on the wall and clean concrete flooring. Sharp focus on the mechanic's hands, the gleaming LED bulb, and the headlight assembly. Neutral white daylight illumination with accurate skin tones and no color cast. Ultra photo-realistic DSLR quality, tight square composition framing the action, professional automotive workshop setting, no text or logos.",
     "timestamp": "2026-04-28T07:46:47.342Z"
+  },
+  {
+    "id": "17854992726643774",
+    "platform": "instagram",
+    "dryRun": false,
+    "pillar": "produit",
+    "text": "Identification VIN 99.9% de précision. 5M+ références en stock. Livraison J+1. \ud83d",
+    "imageUrl": "https://images.pexels.com/photos/29043802/pexels-photo-29043802.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "provider": "pexels",
+    "timestamp": "2026-04-28T17:05:45.225Z"
   }
 ]
