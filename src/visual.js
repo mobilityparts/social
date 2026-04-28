@@ -17,7 +17,8 @@ STRICT VISUAL RULES:
 - NO full human faces ever — frame from shoulders down, or hands only
 - RAW AUTHENTICITY: show the unglamourized reality of daily mechanic work
 - AVOID: straight tools (wrenches, rulers, screwdrivers) — they distort in AI. Instead use:
-- BEST SUBJECTS for realism (choose what fits the post content):
+- CRITICAL COMPOSITION RULE: pick ONE single coherent subject — never mix unrelated elements (e.g. never put a brake disc next to a cardboard box). The scene must make visual sense as a single moment.
+- BEST SUBJECTS for realism (choose the ONE that best fits the post content):
   * A thick golden stream of motor oil being poured from a black container into an open engine, splash detail visible
   * Gloved hands lifting a brand-new brake disc from a cardboard box, workshop floor visible below
   * Close-up of an engine oil filler cap removed, oil residue around the opening, engine bay in background

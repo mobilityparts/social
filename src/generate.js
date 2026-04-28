@@ -40,7 +40,8 @@ EXPERT CONSULTATION + QUOTE SUPPORT:
 DISTRIBUTOR STATUS:
 - Official distributor of AUTO PARTNER and IDIR — two of the largest European auto parts networks
 - This means access to virtually every reference for every European vehicle
-- Content angle: "5M+ références via deux des plus grands réseaux européens de pièces auto"
+- Content angle: "5M+ références accessibles au catalogue — pas en stock physique, mais trouvables et livrables J+1"
+- CRITICAL: NEVER write "en stock" for the 5M figure. Always "au catalogue", "accessibles", "disponibles à la commande"
 
 PRODUCT RANGE — much wider than most realize (use this for content variety):
 - FILTRATION: Mann-Filter, Mahle, WIX — every filter for every engine
