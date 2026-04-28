@@ -40,7 +40,15 @@ Rédige uniquement la caption.`,
     }],
   });
 
-  const text = message.content[0].text.trim();
+  const raw = message.content[0].text.trim();
+  // Strip markdown artifacts left by the model (bold, italic, headers)
+  const text = raw
+    .replace(/\*\*(.*?)\*\*/g, '$1')
+    .replace(/\*(.*?)\*/g, '$1')
+    .replace(/^#{1,3}\s+/gm, '')
+    .replace(/_{2}(.*?)_{2}/g, '$1')
+    .trim();
+
   const hashtags = getHashtags(platform, hashtagIndex);
 
   return {

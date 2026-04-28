@@ -5,6 +5,7 @@ import { generateCaption } from './generate.js';
 import { generateImage } from './visual.js';
 import { publishToInstagram, publishToFacebook } from './meta.js';
 import { getRealPostCount, getHashtagIndex, logPost } from './logger.js';
+import { logValidation } from './validator.js';
 
 const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run');
@@ -39,7 +40,18 @@ async function run() {
   const { imageUrl, prompt, provider } = await generateImage({ pillar, captionText, postCount });
   console.log(`  Image (${provider}): ${imageUrl.slice(0, 60)}...`);
 
-  // 3. Aperçu
+  // 3. Validation + Aperçu
+  console.log(chalk.dim('→ Validation...'));
+  let validationFailed = false;
+  if (igContent) {
+    const v = logValidation({ caption: igContent.caption, pillar: pillar.id, platform: 'instagram' });
+    if (!v.valid) validationFailed = true;
+  }
+  if (fbContent) {
+    const v = logValidation({ caption: fbContent.caption, pillar: pillar.id, platform: 'facebook' });
+    if (!v.valid) validationFailed = true;
+  }
+
   if (igContent) {
     console.log(chalk.bold('\n📱 Instagram:'));
     console.log(igContent.caption);
@@ -49,6 +61,11 @@ async function run() {
     console.log(fbContent.caption);
   }
   console.log('');
+
+  if (validationFailed && !dryRun) {
+    console.error(chalk.red('✗ Publication annulée — validation échouée. Relancer en --dry-run pour voir le contenu.'));
+    process.exit(1);
+  }
 
   if (dryRun) {
     console.log(chalk.yellow('✓ Dry-run terminé — rien publié.'));
