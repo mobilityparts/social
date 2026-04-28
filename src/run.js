@@ -27,10 +27,10 @@ async function run() {
   // 1. Génération caption (même texte de base, adapté par plateforme dans generate.js)
   console.log(chalk.dim('→ Génération caption...'));
   const igContent = platforms.includes('instagram')
-    ? await generateCaption({ pillar, platform: 'instagram', hashtagIndex })
+    ? await generateCaption({ pillar, platform: 'instagram', hashtagIndex, postCount })
     : null;
   const fbContent = platforms.includes('facebook')
-    ? await generateCaption({ pillar, platform: 'facebook', hashtagIndex })
+    ? await generateCaption({ pillar, platform: 'facebook', hashtagIndex, postCount })
     : null;
 
   const captionText = (igContent || fbContent).text;

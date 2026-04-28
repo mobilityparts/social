@@ -84,8 +84,11 @@ TONE BIBLE:
 ✗ Never: "Chez Mobility Parts" as opener
 ✗ Never: marketing language that doesn't belong in a garage conversation`;
 
-export async function generateCaption({ pillar, platform, hashtagIndex }) {
+export async function generateCaption({ pillar, platform, hashtagIndex, postCount }) {
   const hookStyle = HOOK_STYLES[Math.floor(Math.random() * HOOK_STYLES.length)];
+  const contentAngle = pillar.contentAngles
+    ? pillar.contentAngles[(postCount || 0) % pillar.contentAngles.length]
+    : null;
 
   const platformRules = platform === 'instagram'
     ? `INSTAGRAM FORMAT — strict:
@@ -124,9 +127,12 @@ ABSOLUTE NO-GO:
       role: 'user',
       content: `Write a caption in French for pillar: "${pillar.label}"
 
+SPECIFIC TOPIC FOR THIS POST: ${contentAngle || pillar.label}
 Hook approach: ${hookStyle}
 Pillar tone: ${pillar.tone}
 End with this CTA: ${pillar.cta}
+
+The post must be specifically about the topic above — not a generic post about the pillar. Go deep on that one topic.
 
 ${platformRules}
 
