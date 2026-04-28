@@ -2,16 +2,16 @@ import Anthropic from '@anthropic-ai/sdk';
 import { FALLBACK_IMAGES } from './config.js';
 
 const SHOT_STYLES = [
-  'extreme macro close-up, f/1.8, only the subject sharp, everything else dissolved into bokeh',
-  'dramatic low-angle shot, camera near floor level looking up, industrial ceiling visible',
-  'overhead flat-lay, directly above, perfect square, parts arranged on oily workshop floor',
-  'cinematic wide shot, subject small in frame, full garage environment surrounding it',
-  'split-second action — liquid mid-pour or part mid-installation, slight motion blur on edges',
-  'moody single hard light from left, deep shadows on right, high contrast chiaroscuro',
-  'documentary candid — imperfect, slightly asymmetric framing, feels caught not staged',
-  'dawn golden light through open roll-up door, long shadows, warm backlight on subject',
-  'tight environmental — subject fills 70% of frame, authentic workspace visible around it',
-  'before/after juxtaposition — worn part and new part side by side, stark visual contrast',
+  'close-up of mechanic hands with a specific tool working on a clearly identifiable automotive part, natural fluorescent workshop light',
+  'side-by-side on a metal workbench: worn/damaged part next to its brand-new replacement, flat neutral light, no background clutter',
+  'overhead flat-lay of parts and tools laid out on a clean shop rag before installation, workbench surface showing real use',
+  'wide shot of a car on a hydraulic lift in a European garage, mechanic visible from waist down or from behind only',
+  'tight shot of a specific part mid-removal or mid-installation, identifiable European vehicle visible in background (Golf, Peugeot, Sprinter…)',
+  'professional stockroom: rows of plain cardboard boxes on steel shelving, reference labels visible, realistic warehouse lighting',
+  'mechanic checking a reference on a phone or tablet beside an open car hood — documentary, caught-in-the-act framing',
+  'new part partially out of its plain unbranded cardboard packaging on a workbench, garage environment soft-focused behind',
+  'educational close-up of a failed/worn part showing damage clearly — cracked rubber, scored metal, rust — diagnostic shot',
+  'early morning garage scene: parts boxes stacked near a van or workbench, daylight just coming through the open roll-up door',
 ];
 
 async function buildImagePrompt(captionText, pillar, postCount) {
@@ -20,26 +20,29 @@ async function buildImagePrompt(captionText, pillar, postCount) {
 
   const msg = await client.messages.create({
     model: 'claude-haiku-4-5-20251001',
-    max_tokens: 250,
+    max_tokens: 280,
     messages: [{
       role: 'user',
-      content: `You are a creative director for a B2B automotive brand. Write a FLUX image prompt for Instagram post #${postCount + 1} from Mobility Parts (auto parts distributor, Brussels).
+      content: `You are a photo editor for a B2B automotive trade account on Instagram. Write a FLUX image generation prompt for post #${postCount + 1} from Mobility Parts (auto parts distributor, Brussels).
 
 Post content: ${captionText.slice(0, 200)}
 Pillar: ${pillar.label}
-Required shot style: ${shotStyle}
+Required shot: ${shotStyle}
 
-CREATIVE MISSION: Imagine a unique, visually striking scene from the real world of auto parts or garage work. Go beyond the obvious — think about textures (worn gaskets, oily metal, concrete floors), light (steam from coolant, glint on chrome parts, fluorescent on steel shelving), scale (macro on a spark plug tip, wide shot of a full stockroom), moments (a delivery at dawn, hands sorting references, oil mid-drain).
+WHAT TO SHOOT: Think like a mechanic who takes a photo in his own garage and posts it. Real parts that any professional would recognize immediately — brake disc, timing belt, oil filter, wheel bearing, alternator, air filter. Real workshop environment — hydraulic lift, concrete floor, steel tool chest, fluorescent tubes, metal workbench. European garage aesthetic (VW, Peugeot, Renault, Sprinter context when vehicles are visible).
+
+LIGHTING: Natural workshop light ONLY — fluorescent overhead tubes or daylight through an open garage door. No dramatic shadows, no studio strobes, no atmospheric haze.
 
 HARD RULES:
-- NO full human faces — hands, forearms, silhouettes at most
-- ONE coherent scene — never combine unrelated objects
-- NO logos, text or brand names on any surface — all packaging plain unbranded cardboard
-- Photorealistic, NOT illustrated, NOT CGI
-- Slight grain, authentic workshop lighting, gritty desaturated palette
+- NO full human faces — hands, forearms, silhouettes from behind at most
+- ONE coherent subject — a specific real automotive part in a real context
+- NO logos, text or brand names on any surface — all packaging is plain unbranded cardboard
+- Photorealistic DSLR quality — NOT illustrated, NOT CGI, NOT cinematic
+- NO artificial smoke, fog, steam or atmospheric effects
+- Slight natural grain, honest colours, not heavily graded
 - Square 1:1 composition
 
-Reply with ONLY the prompt — 2-3 vivid, specific sentences.`,
+Reply with ONLY the prompt — 2-3 specific, grounded sentences. Name the exact part. Name the exact context.`,
     }],
   });
   return msg.content[0].text.trim();
