@@ -129,5 +129,16 @@
     "imageUrl": "https://replicate.delivery/xezq/9un3iVtmWGo7PRSFElXVqVe0kGH60d20nxwKeuHMl5VNCbfsA/out-0.jpg",
     "provider": "replicate",
     "timestamp": "2026-04-28T00:25:50.222Z"
+  },
+  {
+    "id": "18066188756690557",
+    "platform": "instagram",
+    "dryRun": false,
+    "pillar": "tips",
+    "text": "**Vos plaquettes chauffent ? C'est pas normal. 🔧**\n\nAvant de changer pour chang",
+    "imageUrl": "https://replicate.delivery/xezq/efgtYNGR6guUc0hejueGu2c1P4f6dE0b7VhfCXcPcLWA2w2nF/out-0.jpg",
+    "provider": "replicate",
+    "fluxPrompt": "A professional mechanic in a modern Brussels workshop, wearing dark work clothes and protective gloves, performing detailed brake pad inspection and replacement on a car engine. Close-up shot focusing on skilled hands manipulating brake components with precision tools and calipers. Natural neutral white workshop lighting, sharp focus on the mechanical work, realistic skin tones and metal textures, clean neutral gray concrete background, professional commercial photography style, square 1:1 composition, high resolution, no text or logos, naturally lit realistic automotive workshop scene.",
+    "timestamp": "2026-04-28T00:27:16.370Z"
   }
 ]
