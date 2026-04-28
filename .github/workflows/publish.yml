@@ -6,7 +6,7 @@ on:
       dry_run:
         description: 'Dry-run (génère sans publier)'
         type: boolean
-        default: false
+        default: true
 
 jobs:
   publish:
