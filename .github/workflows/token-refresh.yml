@@ -1,0 +1,42 @@
+name: Rinnovo Token Meta
+
+on:
+  schedule:
+    - cron: '0 8 1 * *'  # 1° di ogni mese alle 10:00 Brussels
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+
+    steps:
+      - name: Rinnova META_PAGE_ACCESS_TOKEN
+        env:
+          META_APP_ID: ${{ secrets.META_APP_ID }}
+          META_APP_SECRET: ${{ secrets.META_APP_SECRET }}
+          META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          RESPONSE=$(curl -s "https://graph.facebook.com/oauth/access_token\
+          ?grant_type=fb_exchange_token\
+          &client_id=${META_APP_ID}\
+          &client_secret=${META_APP_SECRET}\
+          &fb_exchange_token=${META_PAGE_ACCESS_TOKEN}")
+
+          NEW_TOKEN=$(echo "$RESPONSE" | jq -r '.access_token // empty')
+          ERROR=$(echo "$RESPONSE" | jq -r '.error.message // empty')
+
+          if [ -z "$NEW_TOKEN" ]; then
+            echo "❌ Errore rinnovo token: $ERROR"
+            gh issue create \
+              --repo ${{ github.repository }} \
+              --title "❌ Rinnovo token Meta fallito — $(date +%Y-%m-%d)" \
+              --body "**Errore:** $ERROR\n\nRinnova manualmente il token su [Graph API Explorer](https://developers.facebook.com/tools/explorer) e aggiorna il secret \`META_PAGE_ACCESS_TOKEN\`." \
+              --label "monitor"
+            exit 1
+          fi
+
+          echo "$NEW_TOKEN" | gh secret set META_PAGE_ACCESS_TOKEN --repo ${{ github.repository }}
+          echo "✅ Token Meta rinnovato il $(date +%Y-%m-%d)"
