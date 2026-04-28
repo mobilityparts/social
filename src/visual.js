@@ -1,50 +1,45 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { FALLBACK_IMAGES } from './config.js';
 
-async function buildImagePrompt(captionText, pillar) {
+const SHOT_STYLES = [
+  'extreme macro close-up, f/1.8, only the subject sharp, everything else dissolved into bokeh',
+  'dramatic low-angle shot, camera near floor level looking up, industrial ceiling visible',
+  'overhead flat-lay, directly above, perfect square, parts arranged on oily workshop floor',
+  'cinematic wide shot, subject small in frame, full garage environment surrounding it',
+  'split-second action — liquid mid-pour or part mid-installation, slight motion blur on edges',
+  'moody single hard light from left, deep shadows on right, high contrast chiaroscuro',
+  'documentary candid — imperfect, slightly asymmetric framing, feels caught not staged',
+  'dawn golden light through open roll-up door, long shadows, warm backlight on subject',
+  'tight environmental — subject fills 70% of frame, authentic workspace visible around it',
+  'before/after juxtaposition — worn part and new part side by side, stark visual contrast',
+];
+
+async function buildImagePrompt(captionText, pillar, postCount) {
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+  const shotStyle = SHOT_STYLES[postCount % SHOT_STYLES.length];
+
   const msg = await client.messages.create({
     model: 'claude-haiku-4-5-20251001',
-    max_tokens: 200,
+    max_tokens: 250,
     messages: [{
       role: 'user',
-      content: `Write a FLUX image generation prompt for an Instagram post from Mobility Parts, a B2B auto parts distributor in Brussels.
+      content: `You are a creative director for a B2B automotive brand. Write a FLUX image prompt for Instagram post #${postCount + 1} from Mobility Parts (auto parts distributor, Brussels).
 
 Post content: ${captionText.slice(0, 200)}
 Pillar: ${pillar.label}
+Required shot style: ${shotStyle}
 
-STRICT VISUAL RULES:
-- NO full human faces ever — frame from shoulders down, or hands only
-- RAW AUTHENTICITY: show the unglamourized reality of daily mechanic work
-- AVOID: straight tools (wrenches, rulers, screwdrivers) — they distort in AI. Instead use:
-- CRITICAL COMPOSITION RULE: pick ONE single coherent subject — never mix unrelated elements (e.g. never put a brake disc next to a cardboard box). The scene must make visual sense as a single moment.
-- BEST SUBJECTS for realism (choose the ONE that best fits the post content):
-  * A thick golden stream of motor oil being poured from a black container into an open engine, splash detail visible
-  * Gloved hands lifting a brand-new brake disc from a cardboard box, workshop floor visible below
-  * Close-up of an engine oil filler cap removed, oil residue around the opening, engine bay in background
-  * A used vs new oil filter side by side on a greasy metal workbench, dramatic lighting
-  * Stack of spare parts boxes — brake pads, filters, belts — neatly arranged at a garage entrance
-  * A mechanic's forearm in a blue work uniform reaching deep into an engine bay, engine components surrounding
-  * Coolant being poured into a translucent reservoir, vapor visible, green liquid
-  * A dirty, oil-coated engine block close-up — valve cover gasket being replaced, hands just out of frame
-  * Brake caliper removed and sitting on concrete floor next to a new replacement, workshop background
-  * Battery terminals being connected — copper clamps, white oxide residue on old terminals, close-up
-  * Timing belt laid flat on a workbench next to a worn one — texture contrast
-  * Cardboard delivery boxes from Mobility Parts stacked at the open roll-up door of a garage, morning light
-  * An engine air filter housing open, dirty filter being pulled out by gloved hands
-  * Motor oil draining from a plug into a black pan, golden stream, workshop floor
-  * Spark plugs lined up on a cloth — old carbon-coated next to new, close-up macro detail
-- Canon EOS R5, 35mm lens, f/2.0, shallow depth of field — sharp on subject, bokeh background
-- Harsh realistic workshop lighting: fluorescent overhead mixed with a bit of natural light through a roll-up door
-- Colors: slightly desaturated, high contrast, gritty — grease blacks, steel greys, concrete floors, worn orange or green work uniforms visible at the edges
-- Grain: slight photographic grain for authenticity
-- Square 1:1 composition, tightly framed
-- Photorealistic documentary photography — NOT stock photo, NOT AI-looking, NOT clean or staged
-- ABSOLUTELY NO logos, brand names, text or labels on ANY surface — boxes, uniforms, parts, tools, vehicles. All packaging must be plain, unbranded cardboard or generic industrial containers. No watermarks.
+CREATIVE MISSION: Imagine a unique, visually striking scene from the real world of auto parts or garage work. Go beyond the obvious — think about textures (worn gaskets, oily metal, concrete floors), light (steam from coolant, glint on chrome parts, fluorescent on steel shelving), scale (macro on a spark plug tip, wide shot of a full stockroom), moments (a delivery at dawn, hands sorting references, oil mid-drain).
 
-This should look like a photo a real mechanic posted on their Instagram stories — raw, honest, professional.
+HARD RULES:
+- NO full human faces — hands, forearms, silhouettes at most
+- ONE coherent scene — never combine unrelated objects
+- NO logos, text or brand names on any surface — all packaging plain unbranded cardboard
+- Photorealistic, NOT illustrated, NOT CGI
+- Slight grain, authentic workshop lighting, gritty desaturated palette
+- Square 1:1 composition
 
-Reply with ONLY the prompt, nothing else.`,
+Reply with ONLY the prompt — 2-3 vivid, specific sentences.`,
     }],
   });
   return msg.content[0].text.trim();
@@ -90,10 +85,10 @@ async function pollReplicate(url, maxAttempts = 30) {
   throw new Error('Replicate timeout');
 }
 
-export async function generateImage({ pillar, captionText }) {
+export async function generateImage({ pillar, captionText, postCount }) {
   if (process.env.REPLICATE_API_TOKEN) {
     try {
-      const prompt = await buildImagePrompt(captionText || '', pillar);
+      const prompt = await buildImagePrompt(captionText || '', pillar, postCount || 0);
       console.log(`  FLUX Pro prompt: ${prompt.slice(0, 90)}...`);
       const imageUrl = await generateWithFluxPro(prompt);
       return { imageUrl, prompt, provider: 'flux-pro' };
