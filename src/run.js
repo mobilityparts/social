@@ -78,7 +78,8 @@ async function run() {
       logPost({ id: result.id, platform, dryRun: false, pillar: pillar.id, text: content.text.slice(0, 80), imageUrl, provider, fluxPrompt: prompt });
     } catch (err) {
       console.error(chalk.red(`✗ ${platform} — ${err.message}`));
-      process.exit(1);
+      if (platform === 'instagram') process.exit(1);
+      // Facebook non-fatal — continue sans bloquer
     }
   }
 }
