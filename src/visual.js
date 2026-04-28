@@ -14,17 +14,18 @@ Post content: ${captionText.slice(0, 200)}
 Pillar: ${pillar.label}
 
 STRICT VISUAL RULES:
-- NO human faces, NO people — focus entirely on parts, products, environment
-- Documentary photojournalism style: raw, real, unglamourized
-- Show the OPERATIONAL REALITY: auto parts on shelves, parts being delivered in boxes, spare parts laid out on a workbench, engine components close-up, parts catalog or scanner, delivery boxes at a garage door, mechanic tools and hardware
-- Canon EOS R5, 35mm or 50mm lens, f/2.8, natural or workshop fluorescent lighting
-- Shallow depth of field, sharp focus on the subject
-- Neutral, slightly desaturated colors — real workshop environment, no artificial warmth
-- Square 1:1 composition, Instagram-ready
-- Hyper-realistic photography — NOT illustrated, NOT CGI, NOT painted, NOT AI-looking
-- No text, no logos, no watermarks, no brand identifiers
+- NO full human faces ever — frame from shoulders down, or hands only
+- RAW AUTHENTICITY: show the unglamourized reality of daily mechanic work
+- Preferred subjects (pick what fits the post): grease-stained mechanic hands gripping a wrench or socket, worn work gloves handling a brake disc or alternator, a torque wrench resting on an engine block, auto parts arranged on a grimy workbench, cardboard delivery boxes stacked at a garage door, a VIN scanner held over an engine bay, rows of parts on industrial metal shelving, oil-stained shop floor with tools, a mechanic's forearm reaching into an engine bay
+- Canon EOS R5, 35mm lens, f/2.0, shallow depth of field — sharp on subject, bokeh background
+- Harsh realistic workshop lighting: fluorescent overhead mixed with a bit of natural light through a roll-up door
+- Colors: slightly desaturated, high contrast, gritty — grease blacks, steel greys, concrete floors, worn orange or green work uniforms visible at the edges
+- Grain: slight photographic grain for authenticity
+- Square 1:1 composition, tightly framed
+- Photorealistic documentary photography — NOT stock photo, NOT AI-looking, NOT clean or staged
+- No text, no logos, no watermarks
 
-Focus on what Mobility Parts actually does: sourcing, delivering, stocking the right automotive parts.
+This should look like a photo a real mechanic posted on their Instagram stories — raw, honest, professional.
 
 Reply with ONLY the prompt, nothing else.`,
     }],
