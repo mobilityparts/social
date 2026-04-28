@@ -322,5 +322,15 @@
     "imageUrl": "https://replicate.delivery/xezq/iIX1X3Rq3g4fFaxfdR6ILxpGjHdB0gx51aevpikXFfTOZqezC/tmp9kzkmomn.jpg",
     "provider": "flux-pro",
     "timestamp": "2026-04-28T18:08:19.657Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "produit",
+    "text": "Un fournisseur qui connaît chaque référence, c'est déjà gagner du temps chaque j",
+    "imageUrl": "https://replicate.delivery/xezq/rmFnhUEFIMITAhGBMY1WsNxzDaHCSzQKdV5hRNDs73m9p6nF/tmp91e9s73_.jpg",
+    "provider": "flux-pro",
+    "timestamp": "2026-04-28T18:09:58.198Z"
   }
 ]
