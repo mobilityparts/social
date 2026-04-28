@@ -18,9 +18,11 @@ Caption context: ${captionText.slice(0, 120)}
 Requirements:
 - Professional commercial photography style
 - Square 1:1 format, Instagram-ready
-- Orange accent color (#F97316) in the scene if natural
+- Natural realistic colors, accurate skin tones — absolutely no yellow, green or unnatural color casts on skin or objects
+- Clean neutral background or workshop environment
 - No text, no logos, no watermarks
-- High quality, sharp, well-lit
+- High quality, sharp, well-lit with neutral white light
+- Photo-realistic, not illustrated or cartoon
 
 Reply with ONLY the prompt (no explanation).`,
     }],
