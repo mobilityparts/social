@@ -12,7 +12,7 @@ async function buildFluxPrompt(pillar, captionText) {
       content: `Write a FLUX image generation prompt for a Mobility Parts (auto parts distributor, Brussels) Instagram post.
 
 Pillar: ${pillar.label}
-Visual context: ${pillar.imageStyle}
+Visual scene: ${pillar.imageScenes[Math.floor(Math.random() * pillar.imageScenes.length)]}
 Caption: ${captionText.slice(0, 120)}
 
 Visual style to follow — inspired by Autodoc's Instagram:
