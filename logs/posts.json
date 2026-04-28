@@ -202,5 +202,15 @@
     "provider": "dalle3",
     "fluxPrompt": "A professional mechanic in a modern Brussels automotive workshop carefully scanning a VIN number on a car engine block with a diagnostic tablet, surrounded by neatly organized shelves of genuine auto parts in labeled containers, natural daylight streaming through large windows, captured with sharp DSLR detail, neutral white workshop lighting, clean and organized workspace, square composition, photorealistic, no text or branding visible.",
     "timestamp": "2026-04-28T17:25:15.337Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "b2b",
+    "text": "Votre garage ou flotte mérite mieux qu'une logistique qui traîne. 🚗\n\nChez Mobil",
+    "imageUrl": "https://replicate.delivery/xezq/Bq5JpUWaQFoxPRjsdXc0nGt8Zx1OQ0IO9IfJuSAsxACCB1PLA/tmp6zbpv005.jpg",
+    "provider": "flux-pro",
+    "timestamp": "2026-04-28T17:29:40.547Z"
   }
 ]
