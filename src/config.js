@@ -6,7 +6,7 @@ export const BRAND = {
   vin_rate: '99.9%',
   contacts: {
     // Support post-vente : retours, suivi livraison, notes de crédit, réclamations
-    sav: 'wa.me/32480206410',
+    sav: '+32 480 20 64 10 (disponible via WhatsApp)',
     // Premier contact client : RDV, disponibilité, recherche pièces, commandes, toutes demandes
     shop: 'wa.me/32470134550',
     // Responsable partenariats & grands comptes B2B (flottes, revendeurs) — ne pas mentionner CEO
