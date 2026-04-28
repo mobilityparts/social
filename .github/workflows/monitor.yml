@@ -1,0 +1,93 @@
+name: Monitor Pubblicazione
+
+on:
+  schedule:
+    - cron: '30 8 * * 1-6'  # 10:30 Brussels — 30 min dopo il publish
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      actions: read
+
+    steps:
+      - name: Controlla ultima pubblicazione
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const now = new Date();
+            const since = new Date(now - 90 * 60 * 1000).toISOString();
+
+            const runs = await github.rest.actions.listWorkflowRuns({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'publish.yml',
+              per_page: 5
+            });
+
+            const recent = runs.data.workflow_runs.filter(r => {
+              return r.event === 'schedule' && new Date(r.created_at) >= new Date(since);
+            });
+
+            let title, body;
+
+            if (recent.length === 0) {
+              title = `⚠️ Pubblicazione saltata — cron non scattato (${now.toISOString().slice(0,10)})`;
+              body = [
+                `**Data:** ${now.toUTCString()}`,
+                '',
+                'Il workflow `publish.yml` non ha scattato oggi alle 09:00 Brussels.',
+                '',
+                '**Cause possibili:**',
+                '- GitHub Actions ha saltato il cron dopo una modifica al workflow (comportamento noto)',
+                '- Errore di scheduling GitHub',
+                '',
+                `**Azione:** [Triggera manualmente](https://github.com/${context.repo.owner}/${context.repo.repo}/actions/workflows/publish.yml)`,
+              ].join('\n');
+            } else {
+              const lastRun = recent[0];
+
+              if (lastRun.conclusion === 'success') {
+                console.log('✅ Pubblicazione OK:', lastRun.html_url);
+                return;
+              }
+
+              const jobs = await github.rest.actions.listJobsForWorkflowRun({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                run_id: lastRun.id
+              });
+
+              const failedSteps = [];
+              for (const job of jobs.data.jobs) {
+                for (const step of job.steps || []) {
+                  if (step.conclusion === 'failure') {
+                    failedSteps.push(`- **${job.name}** → step \`${step.name}\``);
+                  }
+                }
+              }
+
+              title = `❌ Pubblicazione fallita — ${now.toISOString().slice(0,10)}`;
+              body = [
+                `**Run:** [#${lastRun.run_number}](${lastRun.html_url})`,
+                `**Evento:** ${lastRun.event}`,
+                `**Conclusione:** ${lastRun.conclusion}`,
+                '',
+                '**Step falliti:**',
+                failedSteps.length ? failedSteps.join('\n') : '_(nessuno trovato — controlla i log)_',
+                '',
+                `**Logs completi:** ${lastRun.html_url}`,
+              ].join('\n');
+            }
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body,
+              labels: ['monitor']
+            });
+
+            core.setFailed(title);

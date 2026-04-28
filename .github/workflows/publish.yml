@@ -2,13 +2,13 @@ name: Publish Instagram + Facebook
 
 on:
   schedule:
-    - cron: '0 7 * * 1-6'  # Lun-Sam 9h Brussels (UTC+2 été) / 8h (UTC+1 hiver)
+    - cron: '0 8 * * 1-6'  # Lun-Sam 10h Brussels (UTC+2 été) / 9h (UTC+1 hiver)
   workflow_dispatch:
     inputs:
       dry_run:
         description: 'Dry-run (génère sans publier)'
         type: boolean
-        default: true
+        default: false
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
