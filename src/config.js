@@ -1,7 +1,7 @@
 export const BRAND = {
   name: 'Mobility Parts',
   tagline: 'Votre distributeur B2B de pièces auto à Bruxelles',
-  delivery: 'Livraison J+1 (commande avant 18h)',
+  delivery: 'Livraison rapide — J+1 selon disponibilité',
   references: '5M+ références au catalogue',
   vin_rate: '99.9%',
   contacts: {

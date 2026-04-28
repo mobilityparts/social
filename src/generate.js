@@ -9,7 +9,7 @@ const HOOK_STYLES = [
   'Open with a sharp question about a daily frustration: sourcing, availability, delivery delays',
   'Open with a short statement that reframes how garages think about their parts supplier',
   'Open with a number or stat that creates instant credibility with a professional audience',
-  'Open with "Tu commandes X, tu reçois Y, en J+1" — a concrete delivery or sourcing scenario',
+  'Open with a concrete sourcing scenario: a mechanic needed a rare part, Mobility Parts found it fast',
 ];
 
 const BRAND_STRATEGY = `
@@ -62,10 +62,10 @@ TARGET (write FOR them, not AT them):
 - Their real daily pains: wrong part delivered, rare reference impossible to find, supplier doesn't pick up, client waiting since this morning
 
 WHAT MAKES THEM STAY (real emotional drivers):
-- "Je commande à 17h30, c'est là à 8h." → reliability creates irreplaceable loyalty
 - "Ils ont trouvé la ref pour un Peugeot Expert 2009 bi-turbo du premier coup." → expertise builds trust
 - "J'appelais 4 fournisseurs avant. Maintenant j'en appelle un." → simplicity has enormous value
-- "Mon client attendait, la pièce était en stock, réparation faite le jour même." → urgency capacity is a competitive weapon
+- "Mon client attendait, la pièce était disponible, réparation faite le jour même." → urgency capacity is a weapon
+- NEVER make specific promises on delivery times or order cut-offs — speak about speed and reliability in general terms
 
 CONTENT MISSION — every post must do ONE of these:
 1. EDUCATE → give mechanics real knowledge (builds authority and shareability)
