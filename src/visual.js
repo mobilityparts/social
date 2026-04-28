@@ -1,62 +1,55 @@
 import Anthropic from '@anthropic-ai/sdk';
+import OpenAI from 'openai';
 import { FALLBACK_IMAGES } from './config.js';
 
-const PILLAR_FALLBACK_QUERIES = {
-  tips:    ['car mechanic', 'auto repair', 'mechanic engine', 'car maintenance'],
-  produit: ['car engine', 'mechanic tools', 'auto parts', 'car hood engine'],
-  b2b:     ['car repair shop', 'automobile garage', 'mechanic team', 'auto service'],
-  promo:   ['car workshop', 'mechanic working', 'garage repair', 'car service garage'],
-  atelier: ['mechanic', 'car repair', 'auto workshop', 'mechanic hands car'],
-};
-
-async function buildPexelsQuery(captionText, pillarId) {
-  if (!process.env.ANTHROPIC_API_KEY) {
-    const queries = PILLAR_FALLBACK_QUERIES[pillarId] || PILLAR_FALLBACK_QUERIES.tips;
-    return queries[Math.floor(Math.random() * queries.length)];
-  }
-
+async function buildImagePrompt(captionText, pillar) {
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
   const msg = await client.messages.create({
     model: 'claude-haiku-4-5-20251001',
-    max_tokens: 20,
+    max_tokens: 150,
     messages: [{
       role: 'user',
-      content: `Based on this Instagram post for an auto parts distributor, write a 2-3 word Pexels photo search query in English that matches the visual subject. Only output the query, nothing else.
+      content: `Write a DALL-E 3 image prompt for an Instagram post from Mobility Parts, a professional auto parts distributor in Brussels.
 
-Post: ${captionText.slice(0, 200)}`,
+Post content: ${captionText.slice(0, 200)}
+Pillar: ${pillar.label}
+
+Rules:
+- Ultra photo-realistic, DSLR quality
+- Professional European garage or workshop setting
+- Auto parts or mechanics IN ACTION (not posed)
+- Clean, neutral lighting, no color casts
+- Square composition, Instagram-ready
+- No text, no logos, no watermarks
+- Real people only if needed, realistic skin tones
+
+Reply with ONLY the prompt, nothing else.`,
     }],
   });
-
-  return msg.content[0].text.trim().replace(/["""]/g, '').slice(0, 50);
+  return msg.content[0].text.trim();
 }
 
-async function searchPexels(query) {
-  const url = `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=20&page=1&orientation=square`;
-
-  const res = await fetch(url, {
-    headers: { Authorization: process.env.PEXELS_API_KEY },
+async function generateWithDallE(prompt) {
+  const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  const response = await client.images.generate({
+    model: 'dall-e-3',
+    prompt,
+    size: '1024x1024',
+    quality: 'standard',
+    n: 1,
   });
-
-  if (!res.ok) throw new Error(`Pexels ${res.status}: ${await res.text()}`);
-
-  const data = await res.json();
-  if (!data.photos?.length) throw new Error(`Pexels: nessuna foto per "${query}"`);
-
-  const photo = data.photos[Math.floor(Math.random() * data.photos.length)];
-  const imageUrl = photo.src.large2x || photo.src.large;
-
-  console.log(`  Pexels: "${query}" — ${photo.photographer}`);
-  return imageUrl;
+  return response.data[0].url;
 }
 
 export async function generateImage({ pillar, captionText }) {
-  if (process.env.PEXELS_API_KEY) {
+  if (process.env.OPENAI_API_KEY) {
     try {
-      const query = await buildPexelsQuery(captionText || '', pillar.id);
-      const imageUrl = await searchPexels(query);
-      return { imageUrl, provider: 'pexels' };
+      const prompt = await buildImagePrompt(captionText || '', pillar);
+      console.log(`  DALL-E 3 prompt: ${prompt.slice(0, 90)}...`);
+      const imageUrl = await generateWithDallE(prompt);
+      return { imageUrl, prompt, provider: 'dalle3' };
     } catch (err) {
-      console.warn(`  ⚠ Pexels: ${err.message}`);
+      console.warn(`  ⚠ DALL-E 3: ${err.message}`);
     }
   }
 
