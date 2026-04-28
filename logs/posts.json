@@ -332,5 +332,15 @@
     "imageUrl": "https://replicate.delivery/xezq/rmFnhUEFIMITAhGBMY1WsNxzDaHCSzQKdV5hRNDs73m9p6nF/tmp91e9s73_.jpg",
     "provider": "flux-pro",
     "timestamp": "2026-04-28T18:09:58.198Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "promo",
+    "text": "Vous cherchez une courroie de distribution Mann-Filter pour une Golf 7 TDI et le",
+    "imageUrl": "https://replicate.delivery/xezq/fST8TDFOxyzf8kDkI5g7K1Qf6hsCMBReP3xyYD6e1CzyLV9zC/tmpljgbxzum.jpg",
+    "provider": "flux-pro",
+    "timestamp": "2026-04-28T18:11:42.480Z"
   }
 ]
