@@ -39,7 +39,7 @@ STRICT VISUAL RULES:
 - Grain: slight photographic grain for authenticity
 - Square 1:1 composition, tightly framed
 - Photorealistic documentary photography — NOT stock photo, NOT AI-looking, NOT clean or staged
-- No text, no logos, no watermarks
+- ABSOLUTELY NO logos, brand names, text or labels on ANY surface — boxes, uniforms, parts, tools, vehicles. All packaging must be plain, unbranded cardboard or generic industrial containers. No watermarks.
 
 This should look like a photo a real mechanic posted on their Instagram stories — raw, honest, professional.
 
