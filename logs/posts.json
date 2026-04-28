@@ -242,5 +242,15 @@
     "imageUrl": "https://replicate.delivery/xezq/6Yznjq6aL0boJlHzVvIjCYa4SSSPotYyGyycenAgotM7E1PLA/tmpanrg73tw.jpg",
     "provider": "flux-pro",
     "timestamp": "2026-04-28T17:37:58.927Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "b2b",
+    "text": "Vous appelez 3 fournisseurs pour trouver une pièce rare. Nous la trouvons en 20 ",
+    "imageUrl": "https://replicate.delivery/xezq/9KwgLoeNEY1NUSdWak4FfNOnT8DM6Xjgb75a4oQoD1tmMqfsA/tmp5_db_s4l.jpg",
+    "provider": "flux-pro",
+    "timestamp": "2026-04-28T17:40:54.719Z"
   }
 ]
