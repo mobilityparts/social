@@ -160,5 +160,16 @@
     "imageUrl": "https://replicate.delivery/xezq/ja1IrqVbWzJWBJDKjpx2e8hhseGxmgeYFzCsuHQviweN1s9ZB/out-0.jpg",
     "provider": "replicate",
     "timestamp": "2026-04-28T00:37:39.987Z"
+  },
+  {
+    "id": "18119497675656926",
+    "platform": "instagram",
+    "dryRun": false,
+    "pillar": "tips",
+    "text": "Vous pensez que c'est la batterie ? C'est souvent ailleurs. 🔧\n\nOn vous décrypte",
+    "imageUrl": "https://replicate.delivery/xezq/2Ofgz1alMEyNdqbaJSfLhaCkgeCmn8Y0EvYrbatf7U3v9FezC/out-0.jpg",
+    "provider": "replicate",
+    "fluxPrompt": "A professional European mechanic in a modern, clean garage workshop carefully holds a bright LED headlight bulb in his right hand while leaning over an open car hood in soft daylight. His left hand is positioned near the headlight socket on the vehicle. The workshop environment is visible in the soft-focused background with organized tools on the wall and clean concrete flooring. Sharp focus on the mechanic's hands, the gleaming LED bulb, and the headlight assembly. Neutral white daylight illumination with accurate skin tones and no color cast. Ultra photo-realistic DSLR quality, tight square composition framing the action, professional automotive workshop setting, no text or logos.",
+    "timestamp": "2026-04-28T07:46:47.342Z"
   }
 ]
