@@ -232,5 +232,15 @@
     "imageUrl": "https://replicate.delivery/xezq/Wp0EJZkrYrbiK194N448MI7PioE6VVs4agOuNf8QUrsmC1PLA/tmps7z1r83r.jpg",
     "provider": "flux-pro",
     "timestamp": "2026-04-28T17:33:02.159Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "b2b",
+    "text": "Vous commandez un alternateur à 14h, il arrive à 8h15 le lendemain. Vos mécanici",
+    "imageUrl": "https://replicate.delivery/xezq/6Yznjq6aL0boJlHzVvIjCYa4SSSPotYyGyycenAgotM7E1PLA/tmpanrg73tw.jpg",
+    "provider": "flux-pro",
+    "timestamp": "2026-04-28T17:37:58.927Z"
   }
 ]
