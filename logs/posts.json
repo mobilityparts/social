@@ -342,5 +342,15 @@
     "imageUrl": "https://replicate.delivery/xezq/fST8TDFOxyzf8kDkI5g7K1Qf6hsCMBReP3xyYD6e1CzyLV9zC/tmpljgbxzum.jpg",
     "provider": "flux-pro",
     "timestamp": "2026-04-28T18:11:42.480Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "atelier",
+    "text": "Combien de fournisseurs tu appelles avant de trouver la bonne courroie de distri",
+    "imageUrl": "https://replicate.delivery/xezq/N5wtKApMMGahBZRUxCTaaN5rsHPqzbAbMuicDxsO0p1xq6nF/tmp9v6h7uui.jpg",
+    "provider": "flux-pro",
+    "timestamp": "2026-04-28T18:13:27.780Z"
   }
 ]
