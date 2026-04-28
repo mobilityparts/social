@@ -19,7 +19,7 @@ export async function generateCaption({ pillar, platform, hashtagIndex }) {
 Brand: ${BRAND.delivery} | ${BRAND.references} | Identification VIN ${BRAND.vin_rate}
 
 Règles sur les contacts (ne jamais inventer un numéro — utiliser uniquement le CTA fourni):
-- RDV, disponibilité, recherche pièce, commande, premier contact → shop: ${BRAND.contacts.shop}
+- RDV, disponibilité, recherche pièce, commande, premier contact → écrire uniquement "👉 Lien en bio" (le lien WhatsApp est dans la bio du profil)
 - Retour, suivi livraison, note de crédit → SAV: ${BRAND.contacts.sav}
 - Partenariat, flotte, grand compte B2B → responsable: ${BRAND.contacts.sales} (ne jamais écrire "CEO")
 - Ne pas mentionner le SAV si le contenu du post ne concerne pas le post-vente ou la comptabilité`,

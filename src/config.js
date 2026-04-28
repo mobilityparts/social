@@ -21,7 +21,7 @@ export const PILLARS = [
     label: 'Conseil Méca',
     weight: 3,
     tone: 'expert, pédagogue, accessible — comme un mecanicien qui explique à un confrère',
-    cta: `Une question ou un RDV ? On vous répond.\n📲 ${BRAND.contacts.shop}`,
+    cta: `Une question ou un RDV ? 👉 Lien en bio`,
     imageStyle: 'mechanic working on a car engine, professional workshop, detailed close-up of hands and tools',
   },
   {
@@ -45,7 +45,7 @@ export const PILLARS = [
     label: 'Promotion',
     weight: 2,
     tone: 'urgent, attractif, direct — crée le sentiment d\'opportunité',
-    cta: `Commandez avant 18h → livraison J+1\n📲 ${BRAND.contacts.shop}`,
+    cta: `Commandez avant 18h → livraison J+1\n👉 Lien en bio`,
     imageStyle: 'automotive parts with orange accent lighting, promotional photography, dynamic composition',
   },
   {
@@ -53,7 +53,7 @@ export const PILLARS = [
     label: 'Vie Atelier',
     weight: 1,
     tone: 'humour, proximité, authentique — ambiance garage, entre pros',
-    cta: `📲 ${BRAND.contacts.shop}`,
+    cta: `👉 Lien en bio`,
     imageStyle: 'busy car repair workshop atmosphere, mechanics at work, authentic garage environment',
   },
 ];
@@ -94,4 +94,16 @@ export const FALLBACK_IMAGES = [
   'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1080&q=80',
   'https://images.unsplash.com/photo-1542362567-b07e54358753?w=1080&q=80',
   'https://images.unsplash.com/photo-1600705722908-bae9c1cb4144?w=1080&q=80',
+  'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1080&q=80',
+  'https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=1080&q=80',
+  'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=1080&q=80',
+  'https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1080&q=80',
+  'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=1080&q=80',
+  'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=1080&q=80',
+  'https://images.unsplash.com/photo-1676979842753-6ff97bb46e39?w=1080&q=80',
+  'https://images.unsplash.com/photo-1485291571150-772bcfc10da5?w=1080&q=80',
+  'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1080&q=80',
+  'https://images.unsplash.com/photo-1621905251189-08b45249d5f0?w=1080&q=80',
+  'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=1080&q=80',
+  'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1080&q=80',
 ];

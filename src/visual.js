@@ -126,7 +126,7 @@ export async function generateImage({ pillar, captionText, postCount }) {
     }
   }
 
-  const imageUrl = FALLBACK_IMAGES[postCount % FALLBACK_IMAGES.length];
+  const imageUrl = FALLBACK_IMAGES[Math.floor(Math.random() * FALLBACK_IMAGES.length)];
   console.warn(`  ⚠ Fallback stock image utilisée`);
   return { imageUrl, prompt, provider: 'fallback' };
 }
