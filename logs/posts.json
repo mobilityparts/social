@@ -78,5 +78,25 @@
     "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1080&q=80",
     "provider": "fallback",
     "timestamp": "2026-04-28T00:19:42.148Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "tips",
+    "text": "Votre client entend un bruit bizarre à l'accélération ? Avant de changer le mote",
+    "imageUrl": "https://replicate.delivery/xezq/NjHftbDJAsQf3UeRavJ96XBNWPtRhXz2weaDVT1ExqPd5r9ZB/out-0.jpg",
+    "provider": "replicate",
+    "timestamp": "2026-04-28T00:21:43.317Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "facebook",
+    "dryRun": true,
+    "pillar": "tips",
+    "text": "Vos clients vous demandent si c'est vraiment utile de changer le filtre à air ? ",
+    "imageUrl": "https://replicate.delivery/xezq/NjHftbDJAsQf3UeRavJ96XBNWPtRhXz2weaDVT1ExqPd5r9ZB/out-0.jpg",
+    "provider": "replicate",
+    "timestamp": "2026-04-28T00:21:43.318Z"
   }
 ]
