@@ -382,5 +382,16 @@
     "imageUrl": "https://replicate.delivery/xezq/lS8W86m5iK5zAtxmeca7IOax0yytSQxi379fPjtfgcCoWcfZB/tmppzev3f81.jpg",
     "provider": "flux-pro",
     "timestamp": "2026-04-28T22:12:36.543Z"
+  },
+  {
+    "id": "17905689957409986",
+    "platform": "instagram",
+    "dryRun": false,
+    "pillar": "b2b",
+    "text": "Voiture bloquée depuis ce matin, client qui s'impatiente, et la pièce introuvabl",
+    "imageUrl": "https://replicate.delivery/xezq/zCU1Gvcux8LbDlAueUxP4ieaUsHIHt6mtFg9oQvnLxywV7fsA/tmp0ardw7l4.jpg",
+    "provider": "flux-pro",
+    "fluxPrompt": "A brake disc and caliper assembly sitting on a steel workbench under fluorescent workshop lighting, surrounded by plain cardboard boxes on metal shelving in the background, shot at eye level in a Brussels garage with concrete flooring visible, captured with natural overhead tube lights and no filters, photorealistic DSLR quality, 1:1 square frame.",
+    "timestamp": "2026-04-29T13:11:24.799Z"
   }
 ]
