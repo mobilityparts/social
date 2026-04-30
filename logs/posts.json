@@ -393,5 +393,16 @@
     "provider": "flux-pro",
     "fluxPrompt": "A brake disc and caliper assembly sitting on a steel workbench under fluorescent workshop lighting, surrounded by plain cardboard boxes on metal shelving in the background, shot at eye level in a Brussels garage with concrete flooring visible, captured with natural overhead tube lights and no filters, photorealistic DSLR quality, 1:1 square frame.",
     "timestamp": "2026-04-29T13:11:24.799Z"
+  },
+  {
+    "id": "18336253813218280",
+    "platform": "instagram",
+    "dryRun": false,
+    "pillar": "b2b",
+    "text": "Courroie de distrib Golf 7 1.6 TDI, ça coûte combien avant de l'annoncer au clie",
+    "imageUrl": "https://replicate.delivery/xezq/9y8i7ijASMrmNpobq17wMhxXExvOjMhojuFY4ftvZkWdNIQLA/tmpp4oereyh.jpg",
+    "provider": "flux-pro",
+    "fluxPrompt": "A mechanic's weathered hands holding a timing belt (courroie de distribution) horizontally over an open VW Golf 7 engine bay, with a smartphone displaying a Mobility Parts price quote visible beside the part on the metal workbench; fluorescent garage lighting overhead, concrete floor and tool chest visible in soft focus background, shot documentary-style as if captured mid-consultation in a real Brussels workshop.",
+    "timestamp": "2026-04-30T13:10:27.591Z"
   }
 ]
