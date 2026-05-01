@@ -1,13 +1,15 @@
 export const BRAND = {
   name: 'Mobility Parts',
   tagline: 'Votre distributeur B2B de pièces auto à Bruxelles',
-  delivery: 'Livraison rapide — J+1 selon disponibilité',
+  address: 'Parvis Notre Dame 14, 1020 Laeken',
+  delivery: 'Livraison le lendemain maximum — stock disponible en magasin',
   references: '5M+ références au catalogue',
   vin_rate: '99.9%',
   contacts: {
     sav: '+32 480 20 64 10 (disponible via WhatsApp)',
     shop: 'wa.me/32470134550',
     sales: 'wa.me/32475204638',
+    email: 'shop@mobilityparts.eu',
   },
   catalog: 'mobility-parts-eu.odoo.com/formulaire-compte-pro',
 };

@@ -22,10 +22,12 @@ The independent Belgian garage is fighting on three fronts every day: margins, c
 
 MOBILITY PARTS — what they actually do (make every post feel like a real operational moment):
 
-DELIVERY TO THE GARAGE:
-- Their van brings parts to the mechanic — the mechanic doesn't move
-- Ordered → delivered next working morning
-- Content angle: the job that got done because the part was there before the mechanic arrived
+PHYSICAL SHOP + DELIVERY:
+- Physical shop at Parvis Notre Dame 14, 1020 Laeken — walk in, pick up on the spot
+- Parts also in stock at the shop — you can say "en stock au magasin" or "disponible en magasin"
+- Delivery to the garage: ordered → delivered next working morning, maximum le lendemain
+- You CAN write "livraison le lendemain maximum" — it is a real commitment, not a vague promise
+- Content angle: the job that got done because the part was there — at the shop or delivered at the door
 
 WAREHOUSE + EXPERT ADVICE:
 - Real stockroom, real people who know the catalog cold
@@ -43,7 +45,8 @@ QUOTE SUPPORT:
 CATALOG DEPTH:
 - 5M+ references accessible via catalog — not physically in stock, but findable and deliverable
 - CRITICAL: NEVER write "en stock" for the 5M figure. Always "au catalogue", "accessibles", "référencés"
-- CRITICAL: NEVER make specific delivery time promises ("commandez avant 18h" etc.) — speak in general terms: "livraison rapide", "dispo le lendemain"
+- For physical shop stock you CAN say "en stock au magasin" — the Laeken shop (Parvis Notre Dame 14) has real inventory
+- Delivery: "livraison le lendemain maximum" is the real promise — use it. Never invent cut-off hours ("commandez avant 18h")
 
 PRODUCT RANGE — use for content variety across posts:
 - FILTRATION: Mann-Filter, Mahle, WIX — every filter, every engine
