@@ -35,16 +35,27 @@ function logo(variant = 'white', w = 210, extra = '') {
   return `<img src="${logoSrc(variant)}" style="width:${w}px;display:block;${extra}" />`;
 }
 
+const SITE = 'www.mobilityparts.eu';
+const PHONE = '+32 470 13 45 50';
+
 function footer(onDark = true) {
-  return `<div style="position:absolute;bottom:0;left:0;right:0;height:68px;background:${onDark ? NAVY : 'rgba(13,14,42,0.95)'};display:flex;align-items:center;justify-content:space-between;padding:0 36px;z-index:30;gap:12px">
-    <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="${ORANGE}" style="flex-shrink:0"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-      <span style="color:${ORANGE};font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${ADDRESS}</span>
+  return `<div style="position:absolute;bottom:0;left:0;right:0;height:68px;background:${onDark ? NAVY : 'rgba(13,14,42,0.95)'};display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:30;gap:8px">
+    <div style="display:flex;align-items:center;gap:8px;flex:1;min-width:0">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="${ORANGE}" style="flex-shrink:0"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      <span style="color:${ORANGE};font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;white-space:nowrap">${ADDRESS}</span>
     </div>
-    <div style="width:1px;height:30px;background:${ORANGE};opacity:0.35;flex-shrink:0"></div>
-    <div style="display:flex;align-items:center;gap:8px;flex-shrink:0">
+    <div style="width:1px;height:28px;background:${ORANGE};opacity:0.3;flex-shrink:0"></div>
+    <div style="display:flex;align-items:center;gap:7px;flex-shrink:0">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="${ORANGE}" style="flex-shrink:0"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      <span style="color:${WHITE};font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;white-space:nowrap">${SITE}</span>
+    </div>
+    <div style="width:1px;height:28px;background:${ORANGE};opacity:0.3;flex-shrink:0"></div>
+    <div style="display:flex;align-items:center;gap:7px;flex-shrink:0">
       ${WA_ICON}
-      <span style="color:${WHITE};font-family:'Barlow',sans-serif;font-size:18px;font-weight:600">${EMAIL}</span>
+      <div style="display:flex;flex-direction:column;line-height:1.2">
+        <span style="color:${WHITE};font-family:'Barlow',sans-serif;font-size:15px;font-weight:600;white-space:nowrap">${PHONE}</span>
+        <span style="color:rgba(255,255,255,0.55);font-family:'Barlow',sans-serif;font-size:13px;white-space:nowrap">${EMAIL}</span>
+      </div>
     </div>
   </div>`;
 }
