@@ -439,5 +439,17 @@
     "provider": "flux-pro",
     "headline": "UNE COMMANDE, UNE LIVRAISON",
     "timestamp": "2026-05-01T20:46:56.669Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "promo",
+    "text": "La vidange, c'est 5 commandes séparées qui arrivent à des moments différents — s",
+    "imageUrl": "https://i.ibb.co/BHcSShmw/b8a2e9dbd4a8.png",
+    "fluxImageUrl": "https://replicate.delivery/xezq/nJwhix64ve2NHSJC44ffIeaM91dJqJw2VN7Xj6IbD8Z9WxCaB/tmpxphfxz_z.jpg",
+    "provider": "flux-pro",
+    "headline": "KIT COMPLET VIDANGE",
+    "timestamp": "2026-05-01T20:56:22.995Z"
   }
 ]
