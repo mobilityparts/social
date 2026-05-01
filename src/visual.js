@@ -23,26 +23,38 @@ async function buildImagePrompt(captionText, pillar, postCount) {
     max_tokens: 280,
     messages: [{
       role: 'user',
-      content: `You are a photo editor for a B2B automotive trade account on Instagram. Write a FLUX image generation prompt for post #${postCount + 1} from Mobility Parts (auto parts distributor, Brussels).
+      content: `You are writing a photo prompt for a B2B automotive Instagram account. Write a FLUX image prompt for post #${postCount + 1} from Mobility Parts (auto parts distributor, Brussels).
 
 Post content: ${captionText.slice(0, 200)}
 Pillar: ${pillar.label}
 Required shot: ${shotStyle}
 
-WHAT TO SHOOT: Think like a mechanic who takes a photo in his own garage and posts it. Real parts that any professional would recognize immediately — brake disc, timing belt, oil filter, wheel bearing, alternator, air filter. Real workshop environment — hydraulic lift, concrete floor, steel tool chest, fluorescent tubes, metal workbench. European garage aesthetic (VW, Peugeot, Renault, Sprinter context when vehicles are visible).
+GOAL: The photo must look like a mechanic pulled out his phone mid-job and snapped it — candid, unposed, documentary. NOT a professional photoshoot. Viewers should feel like they are standing in a real Belgian garage watching work happen.
 
-LIGHTING: Natural workshop light ONLY — fluorescent overhead tubes or daylight through an open garage door. No dramatic shadows, no studio strobes, no atmospheric haze.
+WHAT TO SHOOT: A specific, nameable automotive part in an active real workshop — brake disc, timing belt, oil filter, wheel bearing, water pump, alternator, air filter, clutch kit. The part should look genuinely used, touched, slightly greasy or dusty as appropriate. Tools nearby. European vehicles when visible (Golf, Peugeot 308, Sprinter, Renault Master, Citroën Berlingo).
+
+PEOPLE: Mechanics can appear naturally — hands working on a part, a mechanic crouching beside a car, a colleague in the background. Real people make the photo feel authentic. Faces are fine if they appear naturally in the shot. No posing, no looking at the camera — caught mid-task.
+
+ENVIRONMENT: Real Belgian independent garage — concrete floor with oil stains, steel tool chest with scratches, hydraulic lift with worn paint, pegboard with hanging tools, cardboard boxes stacked. Everything slightly worn and used, not showroom clean.
+
+LIGHTING: Fluorescent tube overhead or daylight through a half-open roll-up door. Honest, flat, functional light. No dramatic shadows, no studio strobes, no golden hour, no atmospheric effects.
+
+PHOTO FEEL — this is the most important part:
+- Looks like it was shot on a mechanic's smartphone (iPhone or Samsung), not a camera
+- Slight natural noise/grain from indoor lighting
+- Honest colours, zero grading or filters
+- Framing is slightly imperfect — not centered to perfection
+- Real imperfections: slight depth-of-field variation, natural motion
+- Feels like it was taken quickly between two tasks
 
 HARD RULES:
-- NO full human faces — hands, forearms, silhouettes from behind at most
-- ONE coherent subject — a specific real automotive part in a real context
-- NO logos, text or brand names on any surface — all packaging is plain unbranded cardboard
-- Photorealistic DSLR quality — NOT illustrated, NOT CGI, NOT cinematic
-- NO artificial smoke, fog, steam or atmospheric effects
-- Slight natural grain, honest colours, not heavily graded
-- Square 1:1 composition
+- ONE clear subject — a specific part or a specific action
+- NO logos or brand text on any visible surface — all boxes are plain unbranded cardboard
+- NOT illustrated, NOT CGI, NOT cinematic, NOT stock photo aesthetic
+- NO artificial smoke, fog, steam or lens flares
+- Square 1:1 crop
 
-Reply with ONLY the prompt — 2-3 specific, grounded sentences. Name the exact part. Name the exact context.`,
+Reply with ONLY the prompt — 2-3 grounded sentences. Name the exact part. Name the exact environment detail. Make it feel lived-in.`,
     }],
   });
   return msg.content[0].text.trim();

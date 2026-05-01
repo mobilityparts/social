@@ -147,6 +147,8 @@ Plain text only. No markdown. No hashtags. Write ONLY the caption.`,
     .replace(/^#{1,3}\s+/gm, '')
     .replace(/_{2}(.*?)_{2}/g, '$1')
     .replace(/https?:\/\/\S+/g, '')
+    .replace(/\*\*/g, '')
+    .replace(/\*/g, '')
     .trim();
 
   const hashtags = getHashtags(platform, hashtagIndex);
