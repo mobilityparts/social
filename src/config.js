@@ -18,7 +18,7 @@ export const PILLARS = [
     label: 'Conseil Méca',
     weight: 3,
     tone: 'expert, pédagogue, direct — un mécanicien expérimenté qui partage ce qu\'il sait vraiment, sans condescendance',
-    cta: `Une question technique ou un besoin de pièce ? 👉 Lien en bio`,
+    cta: `Une question ou une pièce à trouver ? 👉 Lien en bio — rappel ou formulaire pièce`,
     contentAngles: [
       'Courroie de distribution : les signes d\'usure avant casse, les intervalles réels par type de moteur, ce qui arrive si on attend trop',
       'Diagnostic frein : comment distinguer plaquettes usées, disque voilé, ou étrier grippé — les vérifications concrètes à faire',
@@ -37,7 +37,7 @@ export const PILLARS = [
     label: 'Produit / Marque',
     weight: 2,
     tone: 'technique, précis, factuel — met en valeur la qualité avec des arguments concrets, pas des superlatifs',
-    cta: `Compte pro & tarifs B2B → 👉 Lien en bio`,
+    cta: `Tarifs B2B & catalogue → 👉 Lien en bio — formulaire compte pro`,
     contentAngles: [
       'Filtres Mann-Filter : ce qu\'il y a à l\'intérieur vs un générique — media filtrant, clapet de dérivation, tenue en pression',
       'Disques de frein Maxgear : traitement de surface, métallurgie, pourquoi ça dure plus longtemps qu\'un disque bas de gamme',
@@ -56,7 +56,7 @@ export const PILLARS = [
     label: 'Pro B2B',
     weight: 3,
     tone: 'direct, orienté ROI, sans langue de bois — parle d\'égal à égal avec des gérants de garage et responsables flotte qui n\'ont pas de temps à perdre',
-    cta: `Un projet de partenariat ou une flotte à gérer ? 👉 Lien en bio`,
+    cta: `Un projet de partenariat ou une flotte à gérer ? 👉 Lien en bio — demandez un rappel commercial`,
     contentAngles: [
       'Le calcul ROI d\'un seul fournisseur fiable vs 4 fournisseurs tournants : temps perdu, erreurs, rappels de clients, vrai coût caché',
       'Gestion de flotte : comment un responsable de 50 véhicules suit les coûts pièces par unité, et ce que Mobility Parts change concrètement',
@@ -75,7 +75,7 @@ export const PILLARS = [
     label: 'Promotion',
     weight: 1,
     tone: 'direct, concret, sense of opportunity — crée l\'envie d\'agir sans pression artificielle',
-    cta: `Commande & disponibilité → 👉 Lien en bio`,
+    cta: `Disponibilité & commande → 👉 Lien en bio — formulaire compte pro`,
     contentAngles: [
       'Préparation hiver : le check batterie + filtre habitacle + essuie-glaces — ce que les garages proposent en octobre et ce qu\'il faut avoir en stock',
       'Kit frein complet : l\'économie de commander disques + plaquettes ensemble vs séparément, et l\'argument pour le client final',

@@ -109,11 +109,19 @@ export async function generateCaption({ pillar, platform, hashtagIndex, postCoun
     max_tokens: 500,
     system: `${BRAND_STRATEGY}
 
-CONTACT RULES (strict — Instagram does not support clickable links or WhatsApp numbers in captions):
-- ALL contacts, ALL actions, ALL next steps → ONLY: "👉 Lien en bio"
-- NEVER write any phone number, WhatsApp number, or wa.me link anywhere in the caption
-- NEVER write any URL of any kind (no odoo.com, no wa.me, no website)
-- One CTA per post maximum, always ends with "👉 Lien en bio"
+CONTACT & CTA RULES (strict — Instagram does not support clickable links or numbers):
+- NEVER write any phone number, WhatsApp number, wa.me link, or URL in the caption
+- Every CTA ends with "👉 Lien en bio" — that is the only link
+- Behind the link in bio there are THREE actions available — choose the one that fits the post:
+  1. "rappel commercial" — for B2B, fleet, partnership, or first-contact posts
+  2. "formulaire compte pro" — for product, pricing, or catalog posts
+  3. Generic "👉 Lien en bio" alone — for tips and workshop life posts where no hard CTA fits
+- Write the CTA naturally in French. Examples (adapt to context, do not copy verbatim):
+  "Besoin d'un devis ou d'un rappel ? 👉 Lien en bio"
+  "Ouvrir un compte pro → 👉 Lien en bio"
+  "Catalogue & tarifs B2B → 👉 Lien en bio"
+  "Demandez un rappel commercial 👉 Lien en bio"
+  "Formulaire compte pro en bio 👉"
 
 ABSOLUTE NO-GO:
 - No phone numbers, WhatsApp numbers, or wa.me links — ever
