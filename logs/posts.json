@@ -415,5 +415,17 @@
     "provider": "flux-pro",
     "fluxPrompt": "A genuine alternator partially emerging from plain kraft cardboard packaging on a grey metal workbench, mechanic's hands in frame adjusting the box, fluorescent workshop lights overhead casting natural shadows across the part and concrete garage floor, European garage aesthetic with blurred tool chest and hydraulic lift in background, photorealistic DSLR quality with honest colours and slight natural grain, 1:1 square composition.",
     "timestamp": "2026-05-01T11:42:29.133Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "promo",
+    "text": "Cinq références à commander, c'est cinq risques de délai.\n\nUn kit filtration com",
+    "imageUrl": "https://i.ibb.co/Fq5GFKyr/289811f4794c.png",
+    "fluxImageUrl": "https://replicate.delivery/xezq/PeM3iEMV1cWvbSDaLvvjgv6S56PMTTnkhaDgOQ6M7GYqAWQLA/tmpjbvgpvth.jpg",
+    "provider": "flux-pro",
+    "headline": "UN KIT, UNE COMMANDE",
+    "timestamp": "2026-05-01T20:34:33.577Z"
   }
 ]
