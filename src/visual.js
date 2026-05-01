@@ -31,9 +31,24 @@ Required shot: ${shotStyle}
 
 GOAL: The photo must look like a mechanic pulled out his phone mid-job and snapped it — candid, unposed, documentary. NOT a professional photoshoot. Viewers should feel like they are standing in a real Belgian garage watching work happen.
 
-CRITICAL — MATCH THE POST CONTENT: The image must visually illustrate the specific topic of the post above. If the caption talks about timing belts → shoot a timing belt. If it's about brake discs → show brake discs. If it's about batteries → show a battery in a garage context. The viewer should look at the photo and immediately understand what the post is about. Do NOT show a generic garage shot if the post is about a specific part.
+CRITICAL — MATCH THE POST CONTENT: Read the post content above carefully and pick a visual subject that directly illustrates it. The viewer must look at the photo and immediately understand what the post is about. Extract the specific part, action, or scenario from the caption and shoot that — not a generic garage.
 
-WHAT TO SHOOT: The exact part or action described in the post content, in a real active workshop. The part should look genuinely used, touched, slightly greasy or dusty as appropriate. Tools nearby. European vehicles when visible (Golf, Peugeot 308, Sprinter, Renault Master, Citroën Berlingo).
+FULL DOMAIN OF POSSIBLE SUBJECTS — draw from the whole list depending on post content:
+Engine internals: piston, connecting rod, crankshaft, camshaft, valves, head gasket, cylinder head, engine block, injector, fuel rail, intake manifold, EGR valve, turbocharger, intercooler, oil sump, timing chain
+Filtration: oil filter, air filter, cabin filter, fuel filter, hydraulic filter — Mann-Filter, Mahle, WIX
+Brakes & safety: brake disc, brake pad, brake caliper, brake hose, ABS sensor, brake fluid reservoir, handbrake cable, master cylinder
+Suspension & steering: shock absorber, coil spring, strut, ball joint, tie rod end, steering rack, sway bar link, wheel bearing, hub, CV joint, driveshaft
+Transmission & clutch: clutch disc, pressure plate, flywheel, clutch kit, gearbox, gear lever, differential
+Electrical & sensors: alternator, starter motor, battery, lambda sensor, MAF sensor, crankshaft position sensor, temperature sensor, throttle body, fuse box, relay
+Cooling system: radiator, water pump, thermostat, coolant reservoir, radiator hose, cooling fan, heater matrix
+Exhaust: catalytic converter, DPF/FAP filter, O2 sensor, exhaust manifold, flexible joint, muffler
+Bodywork: bumper, door panel, wing mirror, headlight, taillight, windscreen wiper, bonnet, door handle
+Tyres & wheels: tyre, alloy wheel, hub cap, lug nuts, valve, tyre pressure gauge, wheel balancing weight
+Lubrication & fluids: oil drum, oil gun, coolant jug, brake fluid bottle, power steering fluid
+Workshop equipment: hydraulic lift, diagnostic scan tool, oscilloscope, torque wrench, brake bleeder kit, jack stands, compressor, tyre changer
+Logistics: parts delivery van arriving, mechanic checking a delivery note, stockroom shelves with boxes, parts laid out for a job
+
+WHAT TO SHOOT: Pick the single most relevant subject from the list above based on the post content. Show it in a real active workshop. The part should look genuinely used — slightly greasy, dusty, or mid-installation. Tools nearby. European vehicles when visible (Golf, Peugeot 308, Sprinter, Renault Master, Citroën Berlingo, Iveco Daily).
 
 PEOPLE: Mechanics can appear naturally — hands working on a part, a mechanic crouching beside a car, a colleague in the background. Real people make the photo feel authentic. Faces are fine if they appear naturally in the shot. No posing, no looking at the camera — caught mid-task.
 
