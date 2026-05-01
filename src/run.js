@@ -1,8 +1,10 @@
 import 'dotenv/config';
 import chalk from 'chalk';
 import { getNextPillar, getPillarById } from './config.js';
-import { generateCaption } from './generate.js';
+import { generateCaption, generateHeadline } from './generate.js';
 import { generateImage } from './visual.js';
+import { renderBrandedImage } from './render.js';
+import { uploadImage } from './upload.js';
 import { publishToInstagram, publishToFacebook } from './meta.js';
 import { getRealPostCount, getHashtagIndex, logPost } from './logger.js';
 import { logValidation } from './validator.js';
@@ -40,6 +42,23 @@ async function run() {
   const { imageUrl, prompt, provider } = await generateImage({ pillar, captionText, postCount });
   console.log(`  Image (${provider}): ${imageUrl.slice(0, 60)}...`);
 
+  // 2b. Headline pour le template visuel
+  console.log(chalk.dim('→ Génération headline visuel...'));
+  const { headline, sub } = await generateHeadline(captionText);
+  console.log(`  Template #${(postCount % 20) + 1} — "${headline}"`);
+
+  // 2c. Render template brandé
+  console.log(chalk.dim('→ Render template brandé...'));
+  let brandedImageUrl = imageUrl;
+  try {
+    const { buffer, templateIndex } = await renderBrandedImage({ imageUrl, headline, sub, postCount });
+    console.log(chalk.dim('→ Upload image brandée...'));
+    brandedImageUrl = await uploadImage(buffer);
+    console.log(`  Brandé (template ${templateIndex + 1}): ${brandedImageUrl.slice(0, 60)}...`);
+  } catch (err) {
+    console.warn(chalk.yellow(`  ⚠ Render/upload échoué, fallback image FLUX brute: ${err.message}`));
+  }
+
   // 3. Validation + Aperçu
   console.log(chalk.dim('→ Validation...'));
   let validationFailed = false;
@@ -72,7 +91,7 @@ async function run() {
     for (const platform of platforms) {
       const content = platform === 'instagram' ? igContent : fbContent;
       if (content) {
-        logPost({ id: 'dry-run', platform, dryRun: true, pillar: pillar.id, text: content.text.slice(0, 80), imageUrl, provider });
+        logPost({ id: 'dry-run', platform, dryRun: true, pillar: pillar.id, text: content.text.slice(0, 80), imageUrl: brandedImageUrl, fluxImageUrl: imageUrl, provider, headline });
       }
     }
     return;
@@ -86,13 +105,13 @@ async function run() {
 
       let result;
       if (platform === 'instagram') {
-        result = await publishToInstagram({ caption: content.caption, imageUrl });
+        result = await publishToInstagram({ caption: content.caption, imageUrl: brandedImageUrl });
       } else {
-        result = await publishToFacebook({ caption: content.caption, imageUrl });
+        result = await publishToFacebook({ caption: content.caption, imageUrl: brandedImageUrl });
       }
 
       console.log(chalk.green(`✓ ${platform} — id: ${result.id}`));
-      logPost({ id: result.id, platform, dryRun: false, pillar: pillar.id, text: content.text.slice(0, 80), imageUrl, provider, fluxPrompt: prompt });
+      logPost({ id: result.id, platform, dryRun: false, pillar: pillar.id, text: content.text.slice(0, 80), imageUrl: brandedImageUrl, fluxImageUrl: imageUrl, provider, fluxPrompt: prompt, headline });
     } catch (err) {
       console.error(chalk.red(`✗ ${platform} — ${err.message}`));
       if (platform === 'instagram') process.exit(1);

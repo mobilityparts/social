@@ -84,6 +84,35 @@ TONE BIBLE:
 ✗ Never: "Chez Mobility Parts" as opener
 ✗ Never: marketing language that doesn't belong in a garage conversation`;
 
+export async function generateHeadline(captionText) {
+  const msg = await client.messages.create({
+    model: 'claude-haiku-4-5-20251001',
+    max_tokens: 60,
+    messages: [{
+      role: 'user',
+      content: `Tu es un directeur artistique pour un compte Instagram B2B de pièces auto (Mobility Parts, Bruxelles).
+
+Caption: "${captionText.slice(0, 300)}"
+
+Génère UNIQUEMENT un JSON sur une seule ligne avec deux champs:
+- "h": le titre visuel principal (2-4 mots, MAJUSCULES, percutant, en français — ex: "ZÉRO ERREUR REF", "LA PIÈCE JUSTE")
+- "sub": une ligne d'appui courte (5-8 mots, casse normale, en français — ex: "Livré avant votre premier café")
+
+Exemple: {"h":"COURROIE CASSÉE","sub":"Comment l'anticiper avant qu'il soit trop tard"}
+
+Réponds avec le JSON uniquement, rien d'autre.`,
+    }],
+  });
+
+  try {
+    const raw = msg.content[0].text.trim();
+    const parsed = JSON.parse(raw);
+    return { headline: parsed.h || 'MOBILITY PARTS', sub: parsed.sub || '' };
+  } catch {
+    return { headline: 'MOBILITY PARTS', sub: '' };
+  }
+}
+
 export async function generateCaption({ pillar, platform, hashtagIndex, postCount }) {
   const hookStyle = HOOK_STYLES[Math.floor(Math.random() * HOOK_STYLES.length)];
   const contentAngle = pillar.contentAngles
