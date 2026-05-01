@@ -18,7 +18,7 @@ let _logoRawB64 = null;
 
 function getLogoRawB64() {
   if (!_logoRawB64) {
-    const f = path.resolve(__dirname, '../brand/logoFondblancOrange.png');
+    const f = path.resolve(__dirname, '../brand/_Path_@4x.png');
     _logoRawB64 = fs.readFileSync(f).toString('base64');
   }
   return _logoRawB64;
@@ -60,7 +60,7 @@ const SITE = 'www.mobilityparts.eu';
 const PHONE = '+32 470 13 45 50';
 
 function footer(onDark = true) {
-  return `<div style="position:absolute;bottom:0;left:0;right:0;height:88px;background:${onDark ? NAVY : 'rgba(13,14,42,0.97)'};display:flex;align-items:center;justify-content:space-between;padding:0 32px;z-index:30;gap:10px">
+  return `<div style="position:absolute;bottom:0;left:0;right:0;height:88px;background:rgba(0,0,0,0.72);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:space-between;padding:0 32px;z-index:30;gap:10px">
     <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0">
       <svg viewBox="0 0 24 24" width="26" height="26" fill="${ORANGE}" style="flex-shrink:0"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
       <span style="color:${ORANGE};font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;white-space:nowrap;letter-spacing:0.5px">${ADDRESS}</span>
@@ -271,10 +271,9 @@ const TEMPLATES = [
     <div style="width:1080px;height:1080px;background:url('${img}') center/cover no-repeat;position:relative">
       <div style="position:absolute;inset:0;background:${NAVY}44"></div>
       <div style="position:absolute;top:0;left:0;right:0;height:108px;background:${ORANGE};clip-path:polygon(0 0,100% 0,94% 100%,0 100%);display:flex;align-items:center;padding:0 40px;gap:22px">
-        ${logo(logoDataUrl, 280)}
-        <div style="width:2px;height:48px;background:${NAVY};opacity:0.25"></div>
-        <div style="color:${NAVY};font-size:19px;font-weight:900;letter-spacing:2px;text-transform:uppercase;font-family:'Barlow Condensed',sans-serif">Always by your side</div>
+        <div style="color:${NAVY};font-size:22px;font-weight:900;letter-spacing:2px;text-transform:uppercase;font-family:'Barlow Condensed',sans-serif">MOBILITY PARTS — Always by your side</div>
       </div>
+      <div style="position:absolute;top:120px;left:40px">${logo(logoDataUrl, 280)}</div>
       <div style="position:absolute;bottom:72px;left:40px;right:40px">
         <div style="color:${WHITE};font-size:78px;font-weight:900;text-transform:uppercase;line-height:1;margin-bottom:8px;text-shadow:0 3px 24px rgba(13,14,42,0.7)">${h}</div>
         ${sub ? `<div style="color:rgba(255,255,255,0.8);font-size:26px;font-family:'Barlow',sans-serif;text-shadow:0 2px 12px rgba(13,14,42,0.6)">${sub}</div>` : ''}
