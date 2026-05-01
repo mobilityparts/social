@@ -463,5 +463,17 @@
     "provider": "flux-pro",
     "headline": "UNE COMMANDE COMPLÈTE",
     "timestamp": "2026-05-01T21:18:02.854Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "promo",
+    "text": "Une vidange, c'est 4-5 commandes chez des fournisseurs différents si tu n'as pas",
+    "imageUrl": "https://i.ibb.co/hRBhpxYM/a031d5b386da.png",
+    "fluxImageUrl": "https://replicate.delivery/xezq/vzQg5fKO2LwKBq84MMirvCZ2TVplWF5f2UYsWkmAL3YC9sgWA/tmp2y0d5qqp.jpg",
+    "provider": "flux-pro",
+    "headline": "UN PANIER, UNE LIVRAISON",
+    "timestamp": "2026-05-01T21:38:17.521Z"
   }
 ]
