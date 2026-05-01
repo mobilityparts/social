@@ -404,5 +404,16 @@
     "provider": "flux-pro",
     "fluxPrompt": "A mechanic's weathered hands holding a timing belt (courroie de distribution) horizontally over an open VW Golf 7 engine bay, with a smartphone displaying a Mobility Parts price quote visible beside the part on the metal workbench; fluorescent garage lighting overhead, concrete floor and tool chest visible in soft focus background, shot documentary-style as if captured mid-consultation in a real Brussels workshop.",
     "timestamp": "2026-04-30T13:10:27.591Z"
+  },
+  {
+    "id": "17885795985514231",
+    "platform": "instagram",
+    "dryRun": false,
+    "pillar": "b2b",
+    "text": "Un Master en panne, le client attend dehors, et la pièce moteur que tu cherches ",
+    "imageUrl": "https://replicate.delivery/xezq/YtwDHQX9355tI9dndyPyMer8RU4eRiF9kkKAxsIZKuNZOkgWA/tmpj1eg7oow.jpg",
+    "provider": "flux-pro",
+    "fluxPrompt": "A genuine alternator partially emerging from plain kraft cardboard packaging on a grey metal workbench, mechanic's hands in frame adjusting the box, fluorescent workshop lights overhead casting natural shadows across the part and concrete garage floor, European garage aesthetic with blurred tool chest and hydraulic lift in background, photorealistic DSLR quality with honest colours and slight natural grain, 1:1 square composition.",
+    "timestamp": "2026-05-01T11:42:29.133Z"
   }
 ]
