@@ -109,14 +109,15 @@ export async function generateCaption({ pillar, platform, hashtagIndex, postCoun
     max_tokens: 500,
     system: `${BRAND_STRATEGY}
 
-CONTACT RULES (strict — never invent a number or URL):
-- First contact, quote request, part search, order → ONLY: "👉 Lien en bio"
-- Return, delivery issue, credit note → SAV: ${BRAND.contacts.sav}
-- Partnership, fleet contract, major B2B → ${BRAND.contacts.sales} (NEVER write "CEO" or "directeur")
-- Only mention SAV when the post topic is explicitly after-sales or billing
+CONTACT RULES (strict — Instagram does not support clickable links or WhatsApp numbers in captions):
+- ALL contacts, ALL actions, ALL next steps → ONLY: "👉 Lien en bio"
+- NEVER write any phone number, WhatsApp number, or wa.me link anywhere in the caption
+- NEVER write any URL of any kind (no odoo.com, no wa.me, no website)
+- One CTA per post maximum, always ends with "👉 Lien en bio"
 
 ABSOLUTE NO-GO:
-- No URLs anywhere in the caption (no odoo.com, no wa.me, nothing)
+- No phone numbers, WhatsApp numbers, or wa.me links — ever
+- No URLs of any kind (no odoo.com, no wa.me, no websites)
 - No markdown (**, __, #headers)
 - No "Chez Mobility Parts" opener
 - No generic marketing language — every sentence must contain a specific, useful fact
@@ -147,6 +148,8 @@ Plain text only. No markdown. No hashtags. Write ONLY the caption.`,
     .replace(/^#{1,3}\s+/gm, '')
     .replace(/_{2}(.*?)_{2}/g, '$1')
     .replace(/https?:\/\/\S+/g, '')
+    .replace(/wa\.me\/\S+/g, '👉 Lien en bio')
+    .replace(/\+32\s?\d[\d\s]{6,}/g, '')
     .replace(/\*\*/g, '')
     .replace(/\*/g, '')
     .trim();

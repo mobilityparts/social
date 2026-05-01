@@ -31,7 +31,9 @@ Required shot: ${shotStyle}
 
 GOAL: The photo must look like a mechanic pulled out his phone mid-job and snapped it — candid, unposed, documentary. NOT a professional photoshoot. Viewers should feel like they are standing in a real Belgian garage watching work happen.
 
-WHAT TO SHOOT: A specific, nameable automotive part in an active real workshop — brake disc, timing belt, oil filter, wheel bearing, water pump, alternator, air filter, clutch kit. The part should look genuinely used, touched, slightly greasy or dusty as appropriate. Tools nearby. European vehicles when visible (Golf, Peugeot 308, Sprinter, Renault Master, Citroën Berlingo).
+CRITICAL — MATCH THE POST CONTENT: The image must visually illustrate the specific topic of the post above. If the caption talks about timing belts → shoot a timing belt. If it's about brake discs → show brake discs. If it's about batteries → show a battery in a garage context. The viewer should look at the photo and immediately understand what the post is about. Do NOT show a generic garage shot if the post is about a specific part.
+
+WHAT TO SHOOT: The exact part or action described in the post content, in a real active workshop. The part should look genuinely used, touched, slightly greasy or dusty as appropriate. Tools nearby. European vehicles when visible (Golf, Peugeot 308, Sprinter, Renault Master, Citroën Berlingo).
 
 PEOPLE: Mechanics can appear naturally — hands working on a part, a mechanic crouching beside a car, a colleague in the background. Real people make the photo feel authentic. Faces are fine if they appear naturally in the shot. No posing, no looking at the camera — caught mid-task.
 

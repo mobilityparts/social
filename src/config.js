@@ -56,7 +56,7 @@ export const PILLARS = [
     label: 'Pro B2B',
     weight: 3,
     tone: 'direct, orienté ROI, sans langue de bois — parle d\'égal à égal avec des gérants de garage et responsables flotte qui n\'ont pas de temps à perdre',
-    cta: `Un projet de partenariat ou une flotte à gérer ? Parlons-en.\n📲 ${BRAND.contacts.sales}`,
+    cta: `Un projet de partenariat ou une flotte à gérer ? 👉 Lien en bio`,
     contentAngles: [
       'Le calcul ROI d\'un seul fournisseur fiable vs 4 fournisseurs tournants : temps perdu, erreurs, rappels de clients, vrai coût caché',
       'Gestion de flotte : comment un responsable de 50 véhicules suit les coûts pièces par unité, et ce que Mobility Parts change concrètement',
