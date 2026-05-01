@@ -451,5 +451,17 @@
     "provider": "flux-pro",
     "headline": "KIT COMPLET VIDANGE",
     "timestamp": "2026-05-01T20:56:22.995Z"
+  },
+  {
+    "id": "dry-run",
+    "platform": "instagram",
+    "dryRun": true,
+    "pillar": "promo",
+    "text": "Avant : appeler 3 fournisseurs pour une vidange complète. Trois commandes, trois",
+    "imageUrl": "https://i.ibb.co/SD5xHQnK/4903afe3906c.png",
+    "fluxImageUrl": "https://replicate.delivery/xezq/JZefG3Q8PCpCYUEAtV29AeEiXkWGU6KgGCMJLKKZD1CHUZBtA/tmphtbz580p.jpg",
+    "provider": "flux-pro",
+    "headline": "UNE COMMANDE COMPLÈTE",
+    "timestamp": "2026-05-01T21:18:02.854Z"
   }
 ]
