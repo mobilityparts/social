@@ -475,5 +475,18 @@
     "provider": "flux-pro",
     "headline": "UN PANIER, UNE LIVRAISON",
     "timestamp": "2026-05-01T21:38:17.521Z"
+  },
+  {
+    "id": "18056148950499531",
+    "platform": "instagram",
+    "dryRun": false,
+    "pillar": "promo",
+    "text": "Avant : appeler 4 fournisseurs pour une vidange complète, attendre des délais di",
+    "imageUrl": "https://i.ibb.co/nNGfjtd6/f1e727eff5c7.png",
+    "fluxImageUrl": "https://replicate.delivery/xezq/4uBgvghlSmp1IVbHp9wEMAAXuMvOZjVzesSwhgYMJzZNMcQLA/tmp0j50w42u.jpg",
+    "provider": "flux-pro",
+    "fluxPrompt": "Close-up of a visibly worn Mann-Filter air filter element pulled from an engine bay mid-job — the pleated white paper caked with grey dust and debris, the rubber seal darkened and cracked — lying on a grimy workbench next to its replacement filter still in packaging, mechanic's hands partially visible adjusting the old filter under harsh fluorescent shop lights. Real Belgian garage setting: concrete floor stained with oil drips, steel tool chest in soft focus behind, cardboard parts boxes stacked against the wall, the honest documentary feel of a mechanic snapping this diagnostic shot on his phone to show the customer why the kit change was necessary.",
+    "headline": "UNE COMMANDE, UN KIT",
+    "timestamp": "2026-05-02T10:38:33.844Z"
   }
 ]
