@@ -488,5 +488,18 @@
     "fluxPrompt": "Close-up of a visibly worn Mann-Filter air filter element pulled from an engine bay mid-job — the pleated white paper caked with grey dust and debris, the rubber seal darkened and cracked — lying on a grimy workbench next to its replacement filter still in packaging, mechanic's hands partially visible adjusting the old filter under harsh fluorescent shop lights. Real Belgian garage setting: concrete floor stained with oil drips, steel tool chest in soft focus behind, cardboard parts boxes stacked against the wall, the honest documentary feel of a mechanic snapping this diagnostic shot on his phone to show the customer why the kit change was necessary.",
     "headline": "UNE COMMANDE, UN KIT",
     "timestamp": "2026-05-02T10:38:33.844Z"
+  },
+  {
+    "id": "18110600809845812",
+    "platform": "instagram",
+    "dryRun": false,
+    "pillar": "atelier",
+    "text": "Celui qui connaît la ref de la courroie de distribution d'une Polo 6N sans regar",
+    "imageUrl": "https://i.ibb.co/xKqHfd57/3e21e4e0f9f5.png",
+    "fluxImageUrl": "https://replicate.delivery/xezq/vyZUlqrAyCauPdiRsrtHV7XQAX6Fli37kxtYaY2u4tMpNZoF/tmpwsd0rowo.jpg",
+    "provider": "flux-pro",
+    "fluxPrompt": "# FLUX Prompt — Post #10\n\nA close-up of a timing belt (courroie de distribution) laid out on a workbench in early morning light, mechanic's hands visible adjusting it near a diagnostic manual and a half-empty coffee cup, with stacked plain cardboard parts boxes and a worn steel tool chest blurred in the background; concrete garage floor with oil stains visible at frame edge, fluorescent light casting flat white illumination, shot from a slightly off-center angle like a quick phone snap between tasks, natural grain and honest colours, no filters.",
+    "headline": "LA PIÈCE JUSTE",
+    "timestamp": "2026-05-04T13:14:29.340Z"
   }
 ]
