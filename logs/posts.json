@@ -501,5 +501,17 @@
     "fluxPrompt": "# FLUX Prompt — Post #10\n\nA close-up of a timing belt (courroie de distribution) laid out on a workbench in early morning light, mechanic's hands visible adjusting it near a diagnostic manual and a half-empty coffee cup, with stacked plain cardboard parts boxes and a worn steel tool chest blurred in the background; concrete garage floor with oil stains visible at frame edge, fluorescent light casting flat white illumination, shot from a slightly off-center angle like a quick phone snap between tasks, natural grain and honest colours, no filters.",
     "headline": "LA PIÈCE JUSTE",
     "timestamp": "2026-05-04T13:14:29.340Z"
+  },
+  {
+    "id": "18047222408595228",
+    "platform": "instagram",
+    "dryRun": false,
+    "pillar": "tips",
+    "text": "Courroie de distrib qui claque = client bloqué et devis qui fait peur. Mais avan",
+    "imageUrl": "https://i.ibb.co/ym7JFWnJ/fe79622b8574.png",
+    "fluxImageUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1080&q=80",
+    "provider": "fallback",
+    "headline": "COURROIE QUI CLAQUE",
+    "timestamp": "2026-05-05T11:52:55.365Z"
   }
 ]
