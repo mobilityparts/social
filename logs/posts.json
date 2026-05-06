@@ -513,5 +513,18 @@
     "provider": "fallback",
     "headline": "COURROIE QUI CLAQUE",
     "timestamp": "2026-05-05T11:52:55.365Z"
+  },
+  {
+    "id": "18104533985312458",
+    "platform": "instagram",
+    "dryRun": false,
+    "pillar": "tips",
+    "text": "Le frein qui grince n'est pas toujours l'étrier qui grince.\n\nOn le sait tous : l",
+    "imageUrl": "https://i.ibb.co/7t7qXVyt/378908f256f0.png",
+    "fluxImageUrl": "https://replicate.delivery/xezq/JoZb4edw95WSfknw0kTGQaIeY1gCVeKl8EebFIRCJyf6SWkoF/tmpxgja4tbr.jpg",
+    "provider": "flux-pro",
+    "fluxPrompt": "**FLUX Prompt:**\n\nSide-by-side flat lay on a worn steel workbench under harsh fluorescent garage light: a deeply scored, warped brake disc (left) next to a pristine replacement disc (right), both casting slight shadows on the metal surface. A mechanic's greasy hand partially visible at frame edge, a torque wrench and socket set scattered nearby on the bench, concrete garage floor with oil stains visible at bottom of frame. Shot candid and slightly off-center like a quick phone snap between jobs in a real Brussels garage, honest grain and flat neutral lighting, no background clutter except a blurred tool pegboard behind.",
+    "headline": "MOBILITY PARTS",
+    "timestamp": "2026-05-06T15:55:09.473Z"
   }
 ]
