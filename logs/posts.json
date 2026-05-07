@@ -526,5 +526,18 @@
     "fluxPrompt": "**FLUX Prompt:**\n\nSide-by-side flat lay on a worn steel workbench under harsh fluorescent garage light: a deeply scored, warped brake disc (left) next to a pristine replacement disc (right), both casting slight shadows on the metal surface. A mechanic's greasy hand partially visible at frame edge, a torque wrench and socket set scattered nearby on the bench, concrete garage floor with oil stains visible at bottom of frame. Shot candid and slightly off-center like a quick phone snap between jobs in a real Brussels garage, honest grain and flat neutral lighting, no background clutter except a blurred tool pegboard behind.",
     "headline": "MOBILITY PARTS",
     "timestamp": "2026-05-06T15:55:09.473Z"
+  },
+  {
+    "id": "18350779078208826",
+    "platform": "instagram",
+    "dryRun": false,
+    "pillar": "tips",
+    "text": "Client attend dehors, moteur bloqué à 80 000 km. Filtre générique depuis 20 000 ",
+    "imageUrl": "https://i.ibb.co/KcHHyxB7/652134c101c2.png",
+    "fluxImageUrl": "https://replicate.delivery/xezq/sy7VW7xdhYqeJScL5xCiAeRr03tfwRf6LZRkwQFclme1B0U0C/tmp4zqh6b99.jpg",
+    "provider": "flux-pro",
+    "fluxPrompt": "**FLUX PROMPT:**\n\nOverhead flat-lay shot of a Mann-Filter HU 816x oil filter positioned next to a clogged generic filter with visible black residue buildup, both laid on a worn grey shop rag atop a scratched steel workbench in a Brussels garage — socket wrench and oil filter wrench nearby, fluorescent strip light casting flat overhead illumination, concrete floor visible at frame edge with faint oil stains, shot quickly on a mechanic's phone with natural indoor grain and slightly soft focus, square crop, unbranded cardboard parts box blurred in background.",
+    "headline": "FILTRE OU MOTEUR MORT",
+    "timestamp": "2026-05-07T15:56:24.983Z"
   }
 ]
